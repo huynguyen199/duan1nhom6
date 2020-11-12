@@ -59,7 +59,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/image_slider"
                     android:layout_marginTop="20dp"
-                    android:text="danh sách điện thoại"
+                    android:text="danh sách sản phẩm"
                     android:textColor="@color/colorBlack"
                     android:textSize="20dp" />
 

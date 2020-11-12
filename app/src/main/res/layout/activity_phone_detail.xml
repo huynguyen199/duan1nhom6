@@ -3,6 +3,9 @@
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
+
+<!--    id image_phone là phần slider image-->
     <Toolbar
         android:id="@+id/toolbar_phone_details"
         android:layout_width="match_parent"

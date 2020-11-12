@@ -23,5 +23,10 @@
     <string name="login">LOGIN</string>
     <string name="forgot_password">FORGOT PASSWORD?</string>
     <string name="addCarts">Thêm vào giỏ hàng</string>
-
+    <string name="hoten">Họ tên</string>
+    <string name="sdt">Số điện thoại</string>
+    <string name="mk">Mật khẩu</string>
+    <string name="nhaplai">Nhập lại mật khẩu</string>
+    <string name="style">Khi ấn đang kí , bạn đồng ý với các
+                            Điều khoản , chính sách</string>
 </resources>
