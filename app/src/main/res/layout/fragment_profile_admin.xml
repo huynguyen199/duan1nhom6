@@ -6,107 +6,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragment.ProfileFragment">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
 
-        >
 
-        <RelativeLayout
-            android:id="@+id/relative_profile1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:id="@+id/image_user"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:src="@mipmap/ic_launcher_round"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="17dp" />
-
-            <TextView
-                android:id="@+id/username"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
-                android:layout_toRightOf="@+id/image_user"
-                android:text="username" />
-
-            <TextView
-                android:id="@+id/fullname"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/username"
-                android:layout_marginLeft="22dp"
-                android:layout_marginTop="16dp"
-                android:layout_toRightOf="@+id/image_user"
-                android:text="username" />
-
-        </RelativeLayout>
-
-        <RelativeLayout
-
-            android:id="@+id/relative_profile2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/relative_profile1"
-            android:layout_marginTop="19dp">
-
-            <ImageView
-                android:id="@+id/image_phone"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="27dp"
-                android:layout_marginTop="0dp"
-                android:src="@drawable/ic_message" />
-
-            <ImageView
-
-                android:id="@+id/image_email"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginStart="27dp"
-                android:layout_marginTop="10dp"
-
-                android:layout_below="@+id/image_phone"
-                android:src="@drawable/ic_message" />
-
-            <TextView
-                android:id="@+id/text_phone"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="21dp"
-                android:layout_marginTop="7dp"
-                android:layout_toRightOf="@+id/image_phone"
-                android:text="your phone" />
-
-            <TextView
-                android:id="@+id/text_email"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/text_phone"
-                android:layout_marginLeft="22dp"
-                android:layout_marginTop="27dp"
-                android:layout_toRightOf="@+id/image_email"
-                android:text="your email" />
-
-        </RelativeLayout>
         <com.google.android.material.navigation.NavigationView
-            android:layout_marginTop="10dp"
             android:id="@+id/navigation_options"
             android:layout_width="match_parent"
+            app:headerLayout="@layout/nav_header"
             app:menu="@menu/menu_profile_admin"
             android:layout_below="@+id/relative_profile2"
             android:layout_height="match_parent"
             />
 
-    </RelativeLayout>
 
 </FrameLayout>

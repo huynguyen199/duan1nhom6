@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <RelativeLayout
+                android:id="@+id/relative_top"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/colorWhite"
+                >
+                <ImageView
+                    android:id="@+id/image_user"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@mipmap/ic_launcher"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="22dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBlack"
+
+                    android:layout_toRightOf="@+id/image_user"
+                    android:text="Nguyễn Văn A" />
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview_send"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relative_top"
+                android:layout_above="@+id/linerbottom"
+                />
+            <LinearLayout
+                android:id="@+id/linerbottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal"
+                >
+
+                <EditText
+                    android:id="@+id/edit_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+
+            </LinearLayout>
+        </RelativeLayout>
+</FrameLayout>

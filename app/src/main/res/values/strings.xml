@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CustomBottomNavigationView</string>
+    <string name="app_name"></string>
     <string name="menu_home">Home</string>
     <string name="menu_shopping">Giỏ hàng</string>
     <string name="menu_message">Nhắn tin</string>
@@ -20,7 +20,7 @@
     <string name="top_icon">TOP ICON</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
-    <string name="login">LOGIN</string>
+    <string name="login">Đăng nhập</string>
     <string name="forgot_password">FORGOT PASSWORD?</string>
     <string name="addCarts">Thêm vào giỏ hàng</string>
     <string name="hoten">Họ tên</string>
@@ -29,4 +29,5 @@
     <string name="nhaplai">Nhập lại mật khẩu</string>
     <string name="style">Khi ấn đang kí , bạn đồng ý với các
                             Điều khoản , chính sách</string>
+    <string name="register">Đăng ký</string>
 </resources>
