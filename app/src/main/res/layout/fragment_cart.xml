@@ -14,12 +14,14 @@
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar_carts"
+            android:background="@color/colorBlue"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_marginTop="0dp"
             android:theme="?attr/actionBarTheme">
             <Button
+                android:id="@+id/btnDel"
                 android:text="xoa"
                 android:background="@color/colorWhite"
                 android:layout_width="wrap_content"
@@ -39,12 +41,12 @@
         <RelativeLayout
             android:id="@+id/relative"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="100dp"
             android:layout_alignParentBottom="true"
             >
 
-            <RadioButton
-                android:id="@+id/radioButton"
+            <CheckBox
+                android:id="@+id/checkbox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -54,13 +56,13 @@
                 android:text="Tất cả" />
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/textTotal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="25dp"
                 android:layout_marginTop="31dp"
-                android:layout_toEndOf="@+id/radioButton"
+                android:layout_toEndOf="@+id/checkbox"
                 android:text="Tổng cộng : 0 đ" />
 
             <Button
@@ -72,7 +74,7 @@
                 android:layout_marginStart="45dp"
                 android:layout_marginTop="11dp"
                 android:layout_marginEnd="55dp"
-                android:layout_toEndOf="@+id/textView"
+                android:layout_toEndOf="@+id/textTotal"
                 android:text="Thanh toán" />
         </RelativeLayout>
 

@@ -21,9 +21,10 @@
             android:layout_height="match_parent"
             android:orientation="horizontal"
             android:padding="3dp"
-            android:background="@drawable/round_editext"
+            android:background="@drawable/background_toolbar"
             >
             <EditText
+                android:id="@+id/edit_search"
                 android:layout_width="320dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="5dp"
@@ -46,13 +47,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <ImageView
+                <com.denzcoskun.imageslider.ImageSlider
                     android:id="@+id/image_slider"
                     android:layout_width="match_parent"
-                    android:layout_height="200dp"
+                    android:layout_height="230dp"
                     android:layout_alignParentTop="true"
-                    android:src="@mipmap/ic_launcher_round"
-                    />
+                    android:layout_marginTop="0dp"
+                    app:auto_cycle="true"
+                    app:corner_radius="5"
+                    app:delay="1000"
+                    app:period="1000"
+                    app:placeholder="@color/colorWhite" />
 
                 <TextView
                     android:id="@+id/text_title"
@@ -60,9 +65,10 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/image_slider"
                     android:layout_marginTop="20dp"
-                    android:text="danh sách sản phẩm"
+                    android:fontFamily="@font/dosis_bold"
+                    android:text="Danh sách sản phẩm"
                     android:textColor="@color/colorBlack"
-                    android:textSize="20dp" />
+                    android:textSize="25dp" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerview_phone"

@@ -11,8 +11,8 @@
 
     <ImageView
         android:id="@+id/image_user"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
 
@@ -21,22 +21,24 @@
         android:src="@mipmap/ic_launcher_round" />
 
     <TextView
-        android:id="@+id/text_email"
+        android:id="@+id/text_Email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="13dp"
-
+        android:fontFamily="@font/dosis_bold"
         android:layout_marginTop="52dp"
         android:layout_toRightOf="@+id/image_user"
         android:text="your email" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/text_fullname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-
+        android:textColor="@color/colorBlack"
+        android:fontFamily="@font/dosis_bold"
+        android:textSize="18dp"
         android:layout_marginLeft="13dp"
         android:layout_marginTop="24dp"
         android:layout_toRightOf="@+id/image_user"

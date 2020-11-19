@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".PhoneDetailActivity"
+
+    >
 
 
 
@@ -10,7 +15,7 @@
         android:id="@+id/toolbar_phone_details"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorBlack"
+        android:background="@color/colorBlue"
         />
 
     <ScrollView
@@ -26,11 +31,16 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <ImageView
+            <com.denzcoskun.imageslider.ImageSlider
                 android:id="@+id/image_phone"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:src="@mipmap/ic_launcher"
+                app:period="1000"
+                app:auto_cycle="true"
+                app:delay="1000"
+                app:corner_radius="5"
+                app:placeholder="@color/colorWhite"
                 />
 
             <TextView
@@ -44,7 +54,8 @@
                 android:text="ten dien thoai"
                 android:textColor="@color/colorBlack"
                 android:textSize="25dp"
-                android:textStyle="bold" />
+                android:fontFamily="@font/regular"
+                />
 
             <TextView
                 android:id="@+id/text_price"
@@ -54,22 +65,60 @@
                 android:paddingLeft="20dp"
                 android:text="giá điện thoại"
                 android:textSize="20dp"
-                android:layout_marginTop="3dp"
                 android:background="@color/colorWhite"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/text_description"
-                android:layout_below="@+id/text_price"
-                android:text="mô tả"
-                android:textSize="20dp"
-                android:textColor="@color/colorBlack"
-                android:textStyle="bold"
-                android:layout_marginTop="30dp"
-                android:gravity="center"
+                android:id="@+id/text_guegrantee"
                 android:layout_width="match_parent"
-                android:background="@color/colorWhite"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/text_price"
+                android:background="@color/colorWhite"
+                android:paddingLeft="20dp"
+                android:text="Bảo hành"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text_title_introduce"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:textColor="@color/colorBlack"
+
+                android:text="giới thiệu"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:background="@color/colorWhite"
+                android:layout_below="@+id/text_guegrantee"
+                />
+            <TextView
+                android:id="@+id/text_introduce"
+                android:fontFamily="@font/dosis_bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+
+                android:text="giới thiệu"
+                android:background="@color/colorWhite"
+                android:layout_below="@+id/text_title_introduce"
+                />
+
+
+
+            <TextView
+                android:id="@+id/text_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:gravity="center"
+                android:text="mô tả"
+                android:textColor="@color/colorBlack"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/text_introduce"
                 />
             <TextView
                 android:id="@+id/text_manhinh"
@@ -78,12 +127,17 @@
                 android:layout_below="@+id/text_description"
                 android:text="Màn hình :"
                 android:paddingLeft="20dp"
+                android:textColor="@color/colorBlack"
+                android:fontFamily="@font/dosis_bold"
+
                 android:layout_marginTop="3dp"
                 android:background="@color/colorWhite"
                 />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:fontFamily="@font/dosis_bold"
                 android:layout_below="@+id/text_manhinh"
                 android:text="hệ điều hành"
                 android:paddingLeft="20dp"
@@ -96,6 +150,8 @@
                 android:id="@+id/text_hedieuhanh"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:fontFamily="@font/dosis_bold"
                 android:layout_below="@+id/text_manhinh"
                 android:text="Hệ điều hành :"
                 android:paddingLeft="20dp"
@@ -106,6 +162,8 @@
                 android:textSize="15dp"
                 android:id="@+id/text_camera_sau"
                 android:layout_width="match_parent"
+                android:textColor="@color/colorBlack"
+                android:fontFamily="@font/dosis_bold"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/text_hedieuhanh"
                 android:text="Camera sau :"
@@ -116,6 +174,8 @@
             <TextView
                 android:textSize="15dp"
                 android:id="@+id/text_camera_truoc"
+                android:textColor="@color/colorBlack"
+                android:fontFamily="@font/dosis_bold"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/text_camera_sau"
@@ -129,26 +189,33 @@
                 android:id="@+id/text_gpu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/text_camera_sau"
+                android:textColor="@color/colorBlack"
+                android:fontFamily="@font/dosis_bold"
+                android:layout_below="@+id/text_camera_truoc"
                 android:text="CPU :"
                 android:paddingLeft="20dp"
                 android:layout_marginTop="3dp"
                 android:background="@color/colorWhite"
                 />
+
             <TextView
-                android:textSize="15dp"
                 android:id="@+id/text_ram"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/text_gpu"
-                android:text="Ram :"
-                android:paddingLeft="20dp"
-                android:layout_marginTop="3dp"
+                android:textColor="@color/colorBlack"
+                android:fontFamily="@font/dosis_bold"
+                android:layout_marginTop="7dp"
                 android:background="@color/colorWhite"
-                />
+                android:paddingLeft="20dp"
+                android:text="Ram :"
+                android:textSize="15dp" />
+
             <TextView
                 android:textSize="15dp"
                 android:id="@+id/text_bonhotrong"
+                android:textColor="@color/colorBlack"
+                android:fontFamily="@font/dosis_bold"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/text_ram"
@@ -159,6 +226,8 @@
                 />
             <TextView
                 android:textSize="15dp"
+                android:textColor="@color/colorBlack"
+                android:fontFamily="@font/dosis_bold"
                 android:id="@+id/text_thesim"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -172,6 +241,8 @@
             <TextView
                 android:textSize="15dp"
                 android:id="@+id/text_dungluongpin"
+                android:textColor="@color/colorBlack"
+                android:fontFamily="@font/dosis_bold"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/text_thesim"
@@ -194,9 +265,11 @@
         android:id="@+id/add_carts"
         android:text="@string/addCarts"
         android:textColor="@color/colorWhite"
-        android:background="@color/colorBlack"
+        android:background="@color/colorBlue"
         android:layout_width="match_parent"
+        android:fontFamily="@font/dosis_bold"
         android:layout_height="wrap_content"
+        android:textStyle="bold"
         android:layout_alignParentBottom="true"
         />
 

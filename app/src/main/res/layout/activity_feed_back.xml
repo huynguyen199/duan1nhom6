@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FeedBackActivity">
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Phản Hồi"
+        android:textSize="30dp"
+        android:textColor="@color/colorBlack"
+        android:fontFamily="@font/dosis_bold"
+        android:layout_height="wrap_content"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title"
+        >
+
+        <EditText
+            android:id="@+id/edit_reason"
+            android:layout_width="match_parent"
+            android:hint="Lý do"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content"
+            />
+        <EditText
+            android:id="@+id/decription"
+            android:hint="Miêu tả"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:lines="10"
+            android:gravity="start|top"
+            android:layout_margin="10dp"
+            android:inputType="textLongMessage"
+            android:layout_below="@id/edit_reason"
+            />
+        <Button
+            android:id="@+id/btn_send"
+            android:layout_below="@+id/decription"
+            android:text="Gửi"
+            android:layout_margin="10dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorWhite"
+            android:background="@color/colorBlue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

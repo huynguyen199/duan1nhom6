@@ -2,12 +2,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <group android:checkableBehavior="single">
-        <item android:title="người dùng">
-            <menu>
+        <item  android:title="người dùng">
+            <menu >
         <item
+            
             android:id="@+id/nav_transaction_history"
             android:title="@string/menu_transaction_history"
-            android:icon="@drawable/ic_home"/>
+            android:icon="@drawable/ic_home"
+            />
 
         <item
             android:id="@+id/nav_feedback"

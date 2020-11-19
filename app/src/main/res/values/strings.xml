@@ -9,7 +9,7 @@
     <string name="menu_feedback">Phản hồi</string>
     <string name="menu_changepassword">Đổi mật khẩu</string>
     <string name="menu_transaction_history">Lịch sử giao dịch</string>
-    <string name="menu_logout">thoát</string>
+    <string name="menu_logout">Thoát</string>
     <string name="menu_managerPhone">Quản lý điện thoại</string>
     <string name="menu_managerFeedback">quản lý phản hồi</string>
     <string name="menu_managerUser">quản lý tài khoản</string>
@@ -30,4 +30,6 @@
     <string name="style">Khi ấn đang kí , bạn đồng ý với các
                             Điều khoản , chính sách</string>
     <string name="register">Đăng ký</string>
+    <string name="ho_va_ten">ho va ten</string>
+    <string name="so_dien_thoai">so dien thoai</string>
 </resources>

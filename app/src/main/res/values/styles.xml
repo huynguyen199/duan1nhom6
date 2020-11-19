@@ -9,4 +9,19 @@
     </style>
 
 
+
+    <style name="abc">
+        <item name="android:layout_width">100dp</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="android:layout_alignParentStart">true</item>
+            </style>
+
+
+
+
+    <style name="Widget.NavigationView" parent="Widget.Design.NavigationView">
+        <item name="android:textColor">@color/colorBlue</item>
+        <item name="fontFamily">@font/dosis_bold</item>
+    </style>
+
 </resources>

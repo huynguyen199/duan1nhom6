@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragment.MessageFragment">
 
     <RelativeLayout
@@ -10,19 +11,22 @@
         android:layout_height="match_parent"
         >
 
-
-        <androidx.viewpager.widget.ViewPager
-            android:id="@+id/viewpager"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_above="@+id/tablayout_message"
-            />
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tablayout_message"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#E61D1D"
-            android:layout_alignParentBottom="true"
+            app:tabMode="fixed"
+            app:tabInlineLabel="true"
+            app:tabGravity="fill"
+            android:background="@drawable/background_toolbar"
+            android:layout_alignParentTop="true"
+            />
+        <androidx.viewpager.widget.ViewPager
+            android:layout_below="@+id/tablayout_message"
+            android:id="@+id/viewpager"
+            android:layout_centerHorizontal="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             />
 
     </RelativeLayout>
