@@ -40,4 +40,8 @@ dependencies {
 
     //slider
     implementation 'com.github.denzcoskun:ImageSlideshow:0.0.6'
+    //recyleradapter
+    implementation 'com.firebaseui:firebase-ui-database:6.3.0'
+    implementation 'com.google.android.material:material:1.2.1'
+
 }

@@ -18,7 +18,6 @@
 
 
 
-
     <style name="Widget.NavigationView" parent="Widget.Design.NavigationView">
         <item name="android:textColor">@color/colorBlue</item>
         <item name="fontFamily">@font/dosis_bold</item>

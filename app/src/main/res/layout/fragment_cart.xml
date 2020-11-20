@@ -41,7 +41,7 @@
         <RelativeLayout
             android:id="@+id/relative"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="80dp"
             android:layout_alignParentBottom="true"
             >
 
@@ -49,33 +49,34 @@
                 android:id="@+id/checkbox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/dosis_bold"
                 android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="9dp"
-                android:layout_marginTop="23dp"
                 android:text="Tất cả" />
 
             <TextView
                 android:id="@+id/textTotal"
-                android:layout_width="wrap_content"
+                android:layout_width="180dp"
                 android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
                 android:layout_marginStart="25dp"
                 android:layout_marginTop="31dp"
+                android:fontFamily="@font/dosis_bold"
                 android:layout_toEndOf="@+id/checkbox"
-                android:text="Tổng cộng : 0 đ" />
+                android:text="Tổng cộng : 0 vnd"
+                />
 
             <Button
                 android:id="@+id/btn_thanhtoan"
-                android:layout_width="wrap_content"
+                android:layout_width="120dp"
                 android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginStart="45dp"
-                android:layout_marginTop="11dp"
-                android:layout_marginEnd="55dp"
-                android:layout_toEndOf="@+id/textTotal"
-                android:text="Thanh toán" />
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:text="Thanh toán"
+                android:fontFamily="@font/dosis_bold"
+                android:background="@color/colorBlue"
+                android:textColor="@color/colorWhite"
+                />
         </RelativeLayout>
 
 

@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FeedBackActivity"></activity>
+        <activity android:name=".ManagerPhoneActivity"></activity>
+        <activity android:name=".TransactionHistoryActivity" />
+        <activity android:name=".FeedBackActivity" />
         <activity android:name=".ChangePasswordActivity" />
         <activity android:name=".PhoneDetailActivity" />
         <activity android:name=".MessageActivity" />
@@ -23,8 +25,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:windowSoftInputMode="adjustPan"  android:name=".MainActivity" />
-<!--        android:windowSoftInputMode="adjustPan"    phần này ko ấn editext mà vẫn bị hiện keyb..     -->
+        <activity
+            android:name=".MainActivity"
+            android:windowSoftInputMode="adjustPan" />
     </application>
 
 </manifest>

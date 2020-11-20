@@ -55,6 +55,7 @@
                     android:layout_marginTop="0dp"
                     app:auto_cycle="true"
                     app:corner_radius="5"
+                    android:layout_margin="10dp"
                     app:delay="1000"
                     app:period="1000"
                     app:placeholder="@color/colorWhite" />
@@ -67,6 +68,7 @@
                     android:layout_marginTop="20dp"
                     android:fontFamily="@font/dosis_bold"
                     android:text="Danh sách sản phẩm"
+                    android:layout_margin="10dp"
                     android:textColor="@color/colorBlack"
                     android:textSize="25dp" />
 
@@ -75,8 +77,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_below="@+id/text_title"
-
-                    />
+                    android:layout_margin="10dp"
+                    android:layout_marginTop="0dp" />
             </RelativeLayout>
 
         </ScrollView>
