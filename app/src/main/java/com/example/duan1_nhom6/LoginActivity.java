@@ -39,6 +39,7 @@ public class LoginActivity extends AppCompatActivity {
         Loginbtn = findViewById(R.id.btnLogin);
         RegisterBtn = findViewById(R.id.btnregister);
         checkBox = findViewById(R.id.chkRememberPass);
+        auth = FirebaseAuth.getInstance();
 
         fillnhomatkhau();
 
@@ -111,11 +112,13 @@ public class LoginActivity extends AppCompatActivity {
 
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
 
-        //checking for users Existance : saving the current user
+//        checking for users Existance : saving the current user
         if(firebaseUser != null){
             Intent i = new Intent(LoginActivity.this,MainActivity.class);
             startActivity(i);
             finish();
+        }else{
+
         }
     }
 }

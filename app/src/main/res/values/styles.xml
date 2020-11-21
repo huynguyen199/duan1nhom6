@@ -9,7 +9,6 @@
     </style>
 
 
-
     <style name="abc">
         <item name="android:layout_width">100dp</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -17,10 +16,16 @@
             </style>
 
 
-
     <style name="Widget.NavigationView" parent="Widget.Design.NavigationView">
         <item name="android:textColor">@color/colorBlue</item>
         <item name="fontFamily">@font/dosis_bold</item>
+    </style>
+
+    <style name="nnn">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">150dp</item>
+        <item name="android:background">@color/colorBlue</item>
+
     </style>
 
 </resources>

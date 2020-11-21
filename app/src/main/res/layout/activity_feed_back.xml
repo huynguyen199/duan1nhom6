@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
             />
         <EditText
-            android:id="@+id/describe"
+            android:id="@+id/tenhang"
             android:hint="Miêu tả"
             android:layout_width="match_parent"
             android:layout_height="400dp"
@@ -49,7 +49,7 @@
             />
         <Button
             android:id="@+id/btn_send"
-            android:layout_below="@+id/describe"
+            android:layout_below="@+id/tenhang"
             android:text="Gửi"
             android:layout_margin="10dp"
             android:textStyle="bold"

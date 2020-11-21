@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        >
+
+        <EditText
+            android:id="@+id/price_phone"
+            android:layout_width="match_parent"
+            android:fontFamily="@font/dosis_bold"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/namePhone"
+            android:hint="Lý do"
+            android:layout_marginTop="10dp"
+            />
+
+        <EditText
+            android:id="@+id/tenhang"
+            android:layout_width="match_parent"
+            android:fontFamily="@font/dosis_bold"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/price_phone"
+            android:hint="Miêu tả"
+            />
+        <EditText
+            android:id="@+id/id_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/dosis_bold"
+            android:layout_below="@+id/tenhang"
+            android:hint="mã id người gửi"
+            />
+        <Button
+            android:id="@+id/add_feedback"
+            android:layout_below="@+id/id_user"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/dosis_bold"
+            android:text="thêm"
+            android:textSize="20dp"
+            android:background="@color/colorBlue"
+             android:textColor="@color/colorWhite"
+            android:layout_height="wrap_content"
+            />
+    </RelativeLayout>
+</RelativeLayout>
