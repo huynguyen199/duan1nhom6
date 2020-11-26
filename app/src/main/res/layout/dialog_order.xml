@@ -23,7 +23,7 @@
             />
 
         <TextView
-            android:id="@+id/namePhone"
+            android:id="@+id/edit_idPhone"
             android:fontFamily="@font/regular"
             android:layout_alignParentTop="true"
             android:text="Phone"
@@ -42,7 +42,7 @@
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/image_phone"
 
-            android:layout_below="@+id/namePhone"
+            android:layout_below="@+id/edit_idPhone"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/dosis_bold"

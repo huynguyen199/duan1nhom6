@@ -5,6 +5,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Toolbar;
 
 import com.example.duan1_nhom6.Adapter.TrasHistoryAdapter;
 import com.example.duan1_nhom6.Model.TrasHistory;
@@ -22,7 +24,23 @@ public class TransactionHistoryActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_transaction_history);
-        recyclerView = findViewById(R.id.recyclerview_manager_feedback);
+
+        Toolbar toolbar = findViewById(R.id.toolbar_transaction_history);
+        setSupportActionBar(toolbar);
+
+        toolbar.setNavigationIcon(getResources().getDrawable(R.drawable.ic_baseline_arrow_back_ios_24));
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //What to do on back clicked
+                finish();
+            }
+        });
+
+
+
+
+        recyclerView = findViewById(R.id.recyclerview_manager_phone);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setHasFixedSize(true);
 
@@ -38,6 +56,9 @@ public class TransactionHistoryActivity extends AppCompatActivity {
 
     }
 
+    private void setSupportActionBar(Toolbar toolbar) {
+    }
+
     @Override
     protected void onStart() {
         super.onStart();
@@ -49,4 +70,11 @@ public class TransactionHistoryActivity extends AppCompatActivity {
         super.onStop();
         adapter.stopListening();
     }
+
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right);
+    }
+
 }

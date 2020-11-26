@@ -8,36 +8,36 @@
         android:layout_margin="10dp"
         >
         <EditText
-            android:id="@+id/id_phone"
+            android:id="@+id/edit_fullname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/dosis_bold"
             android:hint="Tên điện thoại" />
 
         <EditText
-            android:id="@+id/namePhone"
+            android:id="@+id/edit_idPhone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/dosis_bold"
-            android:layout_below="@+id/id_phone"
+            android:layout_below="@+id/edit_fullname"
             android:layout_marginTop="10dp"
 
             android:hint="Tên điện thoại" />
 
         <EditText
-            android:id="@+id/price_phone"
+            android:id="@+id/edit_price"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/namePhone"
+            android:layout_below="@+id/edit_idPhone"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/dosis_bold"
             android:hint="Giá tiền" />
 
         <EditText
-            android:id="@+id/tenhang"
+            android:id="@+id/edit_producer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/price_phone"
+            android:layout_below="@+id/edit_price"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/dosis_bold"
             android:hint="Tên hãng" />
@@ -46,12 +46,12 @@
             android:id="@+id/imagePhone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/tenhang"
+            android:layout_below="@+id/edit_producer"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/dosis_bold"
             android:hint="link hình ảnh" />
         <Button
-            android:id="@+id/add_feedback"
+            android:id="@+id/updatePhone"
             android:layout_below="@+id/imagePhone"
             android:layout_width="match_parent"
             android:layout_marginTop="10dp"

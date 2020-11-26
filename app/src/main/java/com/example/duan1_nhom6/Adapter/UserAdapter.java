@@ -46,7 +46,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserHolder>{
         holder.numberphone.setText(user.getNumberphone());
 
         if(user.getImageURL().equals("default")){
-            holder.image_user.setImageResource(R.mipmap.ic_launcher);
+            holder.image_user.setImageResource(R.drawable.ic_user);
         }else{
             Picasso.get()
                     .load(user.getImageURL())

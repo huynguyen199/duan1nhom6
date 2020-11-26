@@ -30,14 +30,14 @@
         >
 
         <EditText
-            android:id="@+id/edit_reason"
+            android:id="@+id/edit_price"
             android:layout_width="match_parent"
             android:hint="Lý do"
             android:layout_margin="10dp"
             android:layout_height="wrap_content"
             />
         <EditText
-            android:id="@+id/tenhang"
+            android:id="@+id/edit_producer"
             android:hint="Miêu tả"
             android:layout_width="match_parent"
             android:layout_height="400dp"
@@ -45,11 +45,11 @@
             android:gravity="start|top"
             android:layout_margin="10dp"
             android:inputType="textLongMessage"
-            android:layout_below="@id/edit_reason"
+            android:layout_below="@id/edit_price"
             />
         <Button
             android:id="@+id/btn_send"
-            android:layout_below="@+id/tenhang"
+            android:layout_below="@+id/edit_producer"
             android:text="Gửi"
             android:layout_margin="10dp"
             android:textStyle="bold"

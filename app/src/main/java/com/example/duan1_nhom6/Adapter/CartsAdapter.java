@@ -122,10 +122,8 @@ public class CartsAdapter extends RecyclerView.Adapter<CartsAdapter.CardsHolder>
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked) {
                     mCards.get(position).setCheck(isChecked);
-                    Log.d("heea", "data " + position + "dsa" + mCards.get(position).isCheck());
                 }else{
                     mCards.get(position).setCheck(isChecked);
-                    Log.d("heea", "data " + position + "dsa" + mCards.get(position).isCheck());
                 }
             }
         });
@@ -140,6 +138,8 @@ public class CartsAdapter extends RecyclerView.Adapter<CartsAdapter.CardsHolder>
                         firebaseCart.child(carts1.getId_phone()).removeValue();
                     }
                 }
+
+
                 ((FragmentActivity)context).getSupportFragmentManager()
                         .beginTransaction()
                         .replace(R.id.fragment_container, new CartFragment())
@@ -220,10 +220,6 @@ public class CartsAdapter extends RecyclerView.Adapter<CartsAdapter.CardsHolder>
         }
 
         //++++
-
-
-
-
 
 
 

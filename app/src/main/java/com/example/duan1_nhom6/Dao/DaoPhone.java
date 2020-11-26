@@ -3,6 +3,7 @@ package com.example.duan1_nhom6.Dao;
 import android.content.Context;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
@@ -10,6 +11,8 @@ import com.example.duan1_nhom6.Adapter.CartsAdapter;
 import com.example.duan1_nhom6.BuildConfig;
 import com.example.duan1_nhom6.Model.Carts;
 import com.example.duan1_nhom6.Model.Phone;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -32,7 +35,41 @@ public class DaoPhone {
         this.context = context;
         this.firebaseDatabase = FirebaseDatabase.getInstance().getReference("Phone");
     }
-    public void getAll(){
+
+
+    public void insert(Phone phone){
+        firebaseDatabase.child(phone.getId()).setValue(phone.toMap()).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+
+            }
+        });
+    }
+    public void delete(Phone phone){
+        firebaseDatabase.child(phone.getId()).removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if(task.isSuccessful()){
+                    Toast.makeText(context, "Xóa thành công", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+    }
+    public void update(Phone phone){
+        firebaseDatabase.child(phone.getId()).updateChildren(phone.updatePhone()).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if(task.isSuccessful()){
+                    Toast.makeText(context, "update thành công", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+    }
+
+
+
+        public void getAll(){
         Log.d("get", "getAll: ");
         firebaseCart = FirebaseDatabase.getInstance().getReference().child("Cart");
         firebasePhone = FirebaseDatabase.getInstance().getReference("Phone");

@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -29,6 +30,18 @@ public class ChangePasswordActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_change_password);
         init();
+
+        Toolbar toolbar = findViewById(R.id.toolbar_changepass);
+        setSupportActionBar(toolbar);
+
+        toolbar.setNavigationIcon(getResources().getDrawable(R.drawable.ic_baseline_arrow_back_ios_24));
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //What to do on back clicked
+                finish();
+            }
+        });
 
         changepassBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -83,10 +96,19 @@ public class ChangePasswordActivity extends AppCompatActivity {
         Log.d("id", ""+id);
     }
 
+    private void setSupportActionBar(Toolbar toolbar) {
+    }
+
     private void init() {
         oldpassET = findViewById(R.id.edit_oldpass);
         newpassET = findViewById(R.id.edit_newpass);
         againnewpassET = findViewById(R.id.edit_newpass_again);
         changepassBtn = findViewById(R.id.btnChange);
+    }
+
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right);
     }
 }

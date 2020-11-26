@@ -15,7 +15,7 @@
             android:layout_height="120dp"
             />
         <TextView
-            android:id="@+id/namePhone"
+            android:id="@+id/edit_idPhone"
             android:text="ten dien thoai"
             android:layout_alignParentTop="true"
             android:fontFamily="@font/dosis_bold"
@@ -32,12 +32,12 @@
             android:fontFamily="@font/dosis_bold"
             android:layout_toRightOf="@+id/image_managerPhone"
             android:layout_marginTop="10dp"
-            android:layout_below="@+id/namePhone"
+            android:layout_below="@+id/edit_idPhone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             />
         <TextView
-            android:id="@+id/tenhang"
+            android:id="@+id/edit_producer"
             android:text="ten hang"
             android:fontFamily="@font/dosis_bold"
             android:layout_toRightOf="@+id/image_managerPhone"
@@ -48,13 +48,15 @@
             />
 
         <ImageView
+            android:id="@+id/image_del"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:src="@drawable/ic_baseline_delete_forever_24"
             android:layout_marginTop="23dp"
-            android:layout_marginRight="24dp" />
+            android:layout_marginRight="24dp"
+            />
     </RelativeLayout>
 
 </RelativeLayout>

@@ -56,7 +56,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MassageH
         holder.show_message.setText(chat.getMassage());
 
         if(imgURL.equals("default")){
-            holder.profile_image.setImageResource(R.mipmap.ic_launcher);
+            holder.profile_image.setImageResource(R.drawable.ic_user);
 
         }else{
             Picasso.get().load(imgURL).into(holder.profile_image);
@@ -71,6 +71,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MassageH
         }else{
             holder.txt_seen.setVisibility(View.GONE);
         }
+
     }
 
     @Override

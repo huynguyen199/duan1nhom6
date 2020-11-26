@@ -88,6 +88,7 @@ public class ProfileFragment extends Fragment {
                     }
                     if(i!=null){
                         getContext().startActivity(i);
+                        getActivity().overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
                     }
 
                 return true;

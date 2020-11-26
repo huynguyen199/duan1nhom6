@@ -17,12 +17,16 @@ import android.widget.CompoundButton;
 import android.widget.TextView;
 
 import com.example.duan1_nhom6.Adapter.CartsAdapter;
+import com.example.duan1_nhom6.Dao.DaoFeedBack;
 import com.example.duan1_nhom6.Dao.DaoPhone;
 import com.example.duan1_nhom6.Model.Carts;
 import com.example.duan1_nhom6.Model.ChatList;
 import com.example.duan1_nhom6.Model.Phone;
+import com.example.duan1_nhom6.Model.TrasHistory;
 import com.example.duan1_nhom6.Model.User;
 import com.example.duan1_nhom6.R;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -32,12 +36,16 @@ import com.google.firebase.database.ValueEventListener;
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.text.NumberFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Locale;
 
 
 public class CartFragment extends Fragment {
-
+    public SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
+    FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+    DatabaseReference databaseTrasHistory;
     private RecyclerView recyclerView;
     ArrayList<Carts> listCart;
     ArrayList<Phone> listPhone;
@@ -73,6 +81,7 @@ public class CartFragment extends Fragment {
 
         firebaseCart = FirebaseDatabase.getInstance().getReference("Cart");
         firebasePhone = FirebaseDatabase.getInstance().getReference("Phone");
+
 
 
         btnPay.setOnClickListener(new View.OnClickListener() {
@@ -111,6 +120,10 @@ public class CartFragment extends Fragment {
         return view;
     }
     public void handLingPay(){
+        databaseTrasHistory = FirebaseDatabase.getInstance().getReference("TrasHistory");
+
+
+
         firebaseCart.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -128,9 +141,11 @@ public class CartFragment extends Fragment {
                                         DecimalFormatSymbols formatSymbols = new DecimalFormatSymbols();
                                         formatSymbols.setCurrencySymbol("vnd");
                                         nf.setDecimalFormatSymbols(formatSymbols);
-
-                                    texttotal.setText("Tổng cộng: "+nf.format(TOTAL));
-
+                                        texttotal.setText("Tổng cộng: "+nf.format(TOTAL));
+                                        Date now = new Date();
+                                        String date = sdf.format(now.getTime());
+                                        TrasHistory trasHistory = new TrasHistory(date,firebaseUser.getUid(),TOTAL);
+                                        databaseTrasHistory.push().setValue(trasHistory.toMap());
                                 }
                             }
 

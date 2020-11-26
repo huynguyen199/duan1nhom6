@@ -11,21 +11,21 @@
             android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
             android:fontFamily="@font/dosis_bold"
-            android:textSize="20dp"
+            android:text="Thêm sản phẩm"
             android:textColor="@color/colorBlack"
-            android:text="Cập nhật điện thoại"
+            android:textSize="20dp"
+            android:layout_centerHorizontal="true"
             />
+
         <EditText
             android:id="@+id/edit_idPhone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/dosis_bold"
             android:layout_below="@+id/title"
             android:layout_marginTop="10dp"
-
-            android:hint="Tên điện thoại" />
+            android:fontFamily="@font/dosis_bold"
+            android:hint="mã id điện thoại" />
 
         <EditText
             android:id="@+id/edit_price"
@@ -37,33 +37,42 @@
             android:hint="Giá tiền" />
 
         <EditText
-            android:id="@+id/edit_producer"
+            android:id="@+id/edit_image"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/edit_price"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/dosis_bold"
-            android:hint="Tên hãng" />
+            android:hint="link ảnh" />
 
         <EditText
-            android:id="@+id/imagePhone"
+            android:id="@+id/edit_phoneName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/edit_producer"
+            android:layout_below="@+id/edit_image"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/dosis_bold"
-            android:hint="link hình ảnh" />
+            android:hint="Tên điện thoại" />
 
+        <EditText
+            android:id="@+id/edit_producer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edit_phoneName"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/dosis_bold"
+            android:hint="Tên hãng sản xuất" />
         <Button
             android:id="@+id/updatePhone"
+            android:layout_below="@+id/edit_producer"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/imagePhone"
             android:layout_marginTop="10dp"
-            android:background="@color/colorBlue"
             android:fontFamily="@font/dosis_bold"
-            android:text="Cập nhật"
-            android:textColor="@color/colorWhite"
-            android:textSize="20dp" />
+            android:text="thêm"
+            android:textSize="20dp"
+            android:background="@color/colorBlue"
+             android:textColor="@color/colorWhite"
+            android:layout_height="wrap_content"
+            />
     </RelativeLayout>
 </RelativeLayout>

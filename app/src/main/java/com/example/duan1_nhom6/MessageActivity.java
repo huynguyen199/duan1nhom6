@@ -14,6 +14,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import com.example.duan1_nhom6.Adapter.MessageAdapter;
 import com.example.duan1_nhom6.Model.Chat;
@@ -54,6 +55,18 @@ public class MessageActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_message);
+
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        toolbar.setNavigationIcon(getResources().getDrawable(R.drawable.ic_baseline_arrow_blue));
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //What to do on back clicked
+                finish();
+            }
+        });
 
         username = findViewById(R.id.toolbar_title);
         sendBtn = findViewById(R.id.btn_send);
@@ -112,6 +125,9 @@ public class MessageActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void setSupportActionBar(Toolbar toolbar) {
     }
 
     private void SeenMessage(final String userid){

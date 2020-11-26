@@ -8,43 +8,43 @@
         android:layout_margin="10dp"
         >
         <EditText
-            android:id="@+id/namePhone"
+            android:id="@+id/edit_idPhone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="mã id phản hồi"
             android:fontFamily="@font/dosis_bold"
             />
         <EditText
-            android:id="@+id/price_phone"
+            android:id="@+id/edit_price"
             android:layout_width="match_parent"
             android:fontFamily="@font/dosis_bold"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/namePhone"
+            android:layout_below="@+id/edit_idPhone"
             android:hint="Lý do"
             android:layout_marginTop="10dp"
             />
 
         <EditText
-            android:id="@+id/tenhang"
+            android:id="@+id/edit_producer"
             android:layout_width="match_parent"
             android:fontFamily="@font/dosis_bold"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:layout_below="@+id/price_phone"
+            android:layout_below="@+id/edit_price"
             android:hint="Miêu tả"
             />
         <EditText
-            android:id="@+id/id_user"
+            android:id="@+id/edit_phoneName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/dosis_bold"
-            android:layout_below="@+id/tenhang"
+            android:layout_below="@+id/edit_producer"
             android:hint="mã id người gửi"
             />
         <Button
-            android:id="@+id/add_feedback"
-            android:layout_below="@+id/id_user"
+            android:id="@+id/updatePhone"
+            android:layout_below="@+id/edit_phoneName"
             android:layout_width="match_parent"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/dosis_bold"

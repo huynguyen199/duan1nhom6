@@ -1,22 +1,18 @@
 package com.example.duan1_nhom6;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Dialog;
 import android.content.Intent;
-import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.models.SlideModel;
@@ -39,10 +35,8 @@ import com.squareup.picasso.Picasso;
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
-import java.util.Map;
 
 public class PhoneDetailActivity extends AppCompatActivity {
 
@@ -74,6 +68,21 @@ public class PhoneDetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_phone_detail);
         init();
+
+        Toolbar toolbar = findViewById(R.id.toolbar_phone_details);
+        setSupportActionBar(toolbar);
+
+        toolbar.setNavigationIcon(getResources().getDrawable(R.drawable.ic_baseline_arrow_back_ios_24));
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //What to do on back clicked
+                finish();
+            }
+        });
+
+
+
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
         firebasePhone = FirebaseDatabase.getInstance().getReference("Phone");
         firebaseCart = FirebaseDatabase.getInstance().getReference("Cart");
@@ -93,7 +102,7 @@ public class PhoneDetailActivity extends AppCompatActivity {
                 final View view = dialog.getHolderView();
                 view.setTag(dialog);
                 imagecart = view.findViewById(R.id.image_phone);
-                TextName = view.findViewById(R.id.namePhone);
+                TextName = view.findViewById(R.id.edit_idPhone);
                 TextPrice = view.findViewById(R.id.pricePhone);
                 TextAmount = view.findViewById(R.id.text_amount);
                 btnPlus = view.findViewById(R.id.buttonPlus);
@@ -193,7 +202,7 @@ public class PhoneDetailActivity extends AppCompatActivity {
                                 DecimalFormatSymbols formatSymbols = new DecimalFormatSymbols();
                                 formatSymbols.setCurrencySymbol("");
                                 nf.setDecimalFormatSymbols(formatSymbols);
-                                namePhone.setText(phone.getTenhang());
+                                namePhone.setText(phone.getPhonename());
                                 pricePhone.setText("Giá : "+nf.format(phone.getGiatien())+" vnd");
 
 
@@ -253,6 +262,14 @@ public class PhoneDetailActivity extends AppCompatActivity {
 
     }
 
+    private void setSupportActionBar(Toolbar toolbar) {
+    }
+
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right);
+    }
 
     public void init(){
         namePhone = findViewById(R.id.text_title);

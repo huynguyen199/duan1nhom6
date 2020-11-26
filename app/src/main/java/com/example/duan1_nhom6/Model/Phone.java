@@ -17,6 +17,13 @@ public class Phone {
     public Phone() {
     }
 
+    public Phone(int giatien, String image, String phonename, String tenhang) {
+        this.giatien = giatien;
+        this.image = image;
+        this.phonename = phonename;
+        this.tenhang = tenhang;
+    }
+
     public Phone(int giatien, String image, String phonename, String tenhang, String id) {
         this.giatien = giatien;
         this.image = image;
@@ -33,6 +40,17 @@ public class Phone {
         result.put("phonename", phonename);
         result.put("tenhang", tenhang);
         result.put("id", id);
+
+
+        return result;
+    }
+    @Exclude
+    public Map<String, Object> updatePhone() {
+        HashMap<String, Object> result = new HashMap<>();
+        result.put("giatien", giatien);
+        result.put("image", image);
+        result.put("phonename", phonename);
+        result.put("tenhang", tenhang);
 
 
         return result;

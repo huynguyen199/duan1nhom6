@@ -1,5 +1,6 @@
 package com.example.duan1_nhom6.Fragment;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.fragment.app.Fragment;
 
 import com.example.duan1_nhom6.Adapter.ManagerFeedbackAdapter;
@@ -18,6 +20,7 @@ import com.example.duan1_nhom6.FeedBackActivity;
 import com.example.duan1_nhom6.LoginActivity;
 import com.example.duan1_nhom6.ManagerFeedBackActivity;
 import com.example.duan1_nhom6.ManagerPhoneActivity;
+import com.example.duan1_nhom6.ManagerUserActivity;
 import com.example.duan1_nhom6.Model.User;
 import com.example.duan1_nhom6.R;
 import com.example.duan1_nhom6.TransactionHistoryActivity;
@@ -72,25 +75,30 @@ public class ProfileAdminFragment extends Fragment {
                 switch (menuItem.getItemId()){
                     case R.id.nav_managerPhone:
                         i = new Intent(getContext(), ManagerPhoneActivity.class);
-                        break;
-                    case R.id.nav_managePhoneDetails:
-                        i = new Intent(getContext(), ManagerFeedBackActivity.class);
+                        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 
                         break;
                     case R.id.nav_managerFeedback:
                         i = new Intent(getContext(), ManagerFeedBackActivity.class);
+
+                        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         break;
                     case R.id.nav_managerUser:
-                        i = new Intent(getContext(), ChangePasswordActivity.class);
+                        i = new Intent(getContext(), ManagerUserActivity.class);
+                        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+
                         break;
                     case R.id.nav_logout:
                         firebaseUser.child(Uid).child("status").setValue("offline");
                         FirebaseAuth.getInstance().signOut();
                         i = new Intent(getContext(), LoginActivity.class);
+                        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+
                         break;
                 }
                 if(i!=null){
                     getContext().startActivity(i);
+                    getActivity().overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
                 }
 
                 return true;

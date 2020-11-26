@@ -1,6 +1,7 @@
 package com.example.duan1_nhom6.Dao;
 
 import android.content.Context;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -13,11 +14,14 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class DaoFeedBack {
     Context context;
+    View view;
     DatabaseReference databaseFeedback;
-    public DaoFeedBack(Context context) {
-        this.databaseFeedback = FirebaseDatabase.getInstance().getReference("Feedback");
+    public DaoFeedBack(Context context,View view) {
+        this.databaseFeedback = FirebaseDatabase.getInstance().getReference("FeedBack");
         this.context = context;
+        this.view = view;
     }
+
 
     public DaoFeedBack() {
     }
@@ -31,6 +35,9 @@ public class DaoFeedBack {
                 }
             }
         });
+    }
+    public void insertFeedBack(FeedBack feedBack){
+        databaseFeedback.child(feedBack.getId()).setValue(feedBack.toMap());
     }
 
 }

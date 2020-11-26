@@ -17,6 +17,12 @@ public class User {
     public User() {
     }
 
+    public User(String fullname, String numberphone, String role) {
+        this.fullname = fullname;
+        this.numberphone = numberphone;
+        this.role = role;
+    }
+
     @Exclude
     public Map<String, Object> toMap() {
         HashMap<String, Object> result = new HashMap<>();
@@ -25,6 +31,15 @@ public class User {
         result.put("imageURL", imageURL);
         result.put("numberphone", numberphone);
         result.put("status", status);
+        result.put("role", role);
+
+        return result;
+    }
+    @Exclude
+    public Map<String, Object> updateUser() {
+        HashMap<String, Object> result = new HashMap<>();
+        result.put("fullname", fullname);
+        result.put("numberphone", numberphone);
         result.put("role", role);
 
         return result;

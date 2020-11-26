@@ -8,62 +8,56 @@
         android:layout_margin="10dp"
         >
         <TextView
-            android:id="@+id/title"
+            android:id="@+id/updateUsers"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
             android:fontFamily="@font/dosis_bold"
-            android:textSize="20dp"
+            android:text="Cập nhật người dùng"
             android:textColor="@color/colorBlack"
-            android:text="Cập nhật điện thoại"
+            android:textSize="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"
             />
+
+        <EditText
+            android:layout_marginTop="10dp"
+            android:id="@+id/edit_fullname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/updateUsers"
+            android:fontFamily="@font/dosis_bold"
+            android:hint="Tên người dùng" />
+
         <EditText
             android:id="@+id/edit_idPhone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/dosis_bold"
-            android:layout_below="@+id/title"
+            android:layout_below="@+id/edit_fullname"
             android:layout_marginTop="10dp"
+            android:fontFamily="@font/dosis_bold"
 
-            android:hint="Tên điện thoại" />
+            android:hint="Số điện thoại" />
 
-        <EditText
-            android:id="@+id/edit_price"
+        <Spinner
+            android:id="@+id/spinner_role"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_below="@+id/edit_idPhone"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/dosis_bold"
-            android:hint="Giá tiền" />
+            />
 
-        <EditText
-            android:id="@+id/edit_producer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/edit_price"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/dosis_bold"
-            android:hint="Tên hãng" />
-
-        <EditText
-            android:id="@+id/imagePhone"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/edit_producer"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/dosis_bold"
-            android:hint="link hình ảnh" />
 
         <Button
-            android:id="@+id/updatePhone"
+            android:id="@+id/updateBtn"
+            android:layout_below="@+id/spinner_role"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/imagePhone"
             android:layout_marginTop="10dp"
-            android:background="@color/colorBlue"
             android:fontFamily="@font/dosis_bold"
             android:text="Cập nhật"
+            android:textSize="20dp"
+            android:background="@color/colorBlue"
             android:textColor="@color/colorWhite"
-            android:textSize="20dp" />
+            android:layout_height="wrap_content"
+            />
     </RelativeLayout>
 </RelativeLayout>

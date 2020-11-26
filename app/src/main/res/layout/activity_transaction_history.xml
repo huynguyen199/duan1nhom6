@@ -25,7 +25,7 @@
         android:layout_below="@id/toolbar_transaction_history"
         />
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerview_manager_feedback"
+        android:id="@+id/recyclerview_manager_phone"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/text_title"
