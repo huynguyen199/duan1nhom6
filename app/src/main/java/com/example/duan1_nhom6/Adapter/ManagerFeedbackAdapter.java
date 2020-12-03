@@ -109,7 +109,7 @@ public class ManagerFeedbackAdapter extends RecyclerView.Adapter<ManagerFeedback
                             holder.senderText.setText(user.getFullname());
                             Log.d("user", "vao" + user.getFullname());
                             if (user.getImageURL().equals("default")) {
-                                holder.image_Feedback.setImageResource(R.mipmap.ic_launcher);
+                                holder.image_Feedback.setImageResource(R.drawable.ic_user);
                             } else {
                                 Picasso.get().load(user.getImageURL()).into(holder.image_Feedback);
 

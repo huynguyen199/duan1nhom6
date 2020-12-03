@@ -51,7 +51,7 @@ public class ManagerUserAdapter extends RecyclerView.Adapter<ManagerUserAdapter.
             User user = mUsers.get(position);
 
             if(user.getImageURL().equals("default")){
-                holder.imageUser.setImageResource(R.mipmap.ic_launcher);
+                holder.imageUser.setImageResource(R.drawable.ic_user);
             }else{
                 Picasso.get().load(user.getImageURL()).into(holder.imageUser);
             }

@@ -35,6 +35,8 @@ public class User {
 
         return result;
     }
+
+
     @Exclude
     public Map<String, Object> updateUser() {
         HashMap<String, Object> result = new HashMap<>();

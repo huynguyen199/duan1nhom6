@@ -31,7 +31,7 @@ public class DaoUsers {
     }
 
     public void Update(User user) {
-        if (BuildConfig.DEBUG) Log.d("DaoUsers", "user:" + user.getId());
+//        if (BuildConfig.DEBUG) Log.d("DaoUsers", "user:" + user.getId());
         databaseUsers.child(user.getId()).updateChildren(user.updateUser());
 
     }

@@ -101,8 +101,10 @@ public class CartFragment extends Fragment {
                             for(DataSnapshot dataSnapshot :snapshot.getChildren()) {
                                  carts = dataSnapshot.getValue(Carts.class);
                                 Log.d("amount", "onDataChange: "+carts.getAmount());
-                                listCart.add(carts);
+                                if(carts.getId_user().equals(firebaseUser.getUid())) {
+                                    listCart.add(carts);
 
+                                }
                             }
                             listPhone();
 
