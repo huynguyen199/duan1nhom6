@@ -27,7 +27,9 @@ public class DaoFeedBack {
     }
 
     public void sendFeedback(FeedBack feedBack){
-        databaseFeedback.push().setValue(feedBack.toMap()).addOnCompleteListener(new OnCompleteListener<Void>() {
+        String id = databaseFeedback.push().getKey();
+        feedBack.setId(id);
+        databaseFeedback.child(id).setValue(feedBack.toMap()).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if(task.isSuccessful()){

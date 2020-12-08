@@ -23,7 +23,9 @@ import com.example.duan1_nhom6.ManagerPhoneActivity;
 import com.example.duan1_nhom6.ManagerUserActivity;
 import com.example.duan1_nhom6.Model.User;
 import com.example.duan1_nhom6.R;
+import com.example.duan1_nhom6.StatisticalActivity;
 import com.example.duan1_nhom6.TransactionHistoryActivity;
+import com.facebook.login.LoginManager;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -72,31 +74,35 @@ public class ProfileAdminFragment extends Fragment {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 Intent i = null;
+
                 switch (menuItem.getItemId()){
                     case R.id.nav_managerPhone:
                         i = new Intent(getContext(), ManagerPhoneActivity.class);
-                        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 
                         break;
                     case R.id.nav_managerFeedback:
                         i = new Intent(getContext(), ManagerFeedBackActivity.class);
 
-                        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         break;
                     case R.id.nav_managerUser:
                         i = new Intent(getContext(), ManagerUserActivity.class);
-                        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        break;
+                    case R.id.nav_statistical:
+                        i = new Intent(getContext(), StatisticalActivity.class);
 
                         break;
                     case R.id.nav_logout:
                         firebaseUser.child(Uid).child("status").setValue("offline");
+                        LoginManager.getInstance().logOut();
                         FirebaseAuth.getInstance().signOut();
+
                         i = new Intent(getContext(), LoginActivity.class);
                         i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 
                         break;
                 }
                 if(i!=null){
+                    i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     getContext().startActivity(i);
                     getActivity().overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
                 }

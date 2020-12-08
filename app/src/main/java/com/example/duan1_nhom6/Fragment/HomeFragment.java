@@ -14,6 +14,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.models.SlideModel;
@@ -43,6 +44,7 @@ public class HomeFragment extends Fragment {
     private PhoneAdapter adapter;
     private DatabaseReference myref;
     private ArrayList<Phone> list;
+    private ProgressBar progressBar;
 
 
     EditText searchET;
@@ -55,6 +57,7 @@ public class HomeFragment extends Fragment {
 
         recyclerView = view.findViewById(R.id.recyclerview_phone);
         searchET = view.findViewById(R.id.edit_search);
+        progressBar = view.findViewById(R.id.progressBar2);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new GridLayoutManager(container.getContext(), 2));
         list = new ArrayList<>();
@@ -74,6 +77,8 @@ public class HomeFragment extends Fragment {
 
                     adapter = new PhoneAdapter(container.getContext(),list);
                     recyclerView.setAdapter(adapter);
+                    progressBar.setVisibility(View.GONE);
+                    recyclerView.setVisibility(View.VISIBLE);
                 }
             }
 

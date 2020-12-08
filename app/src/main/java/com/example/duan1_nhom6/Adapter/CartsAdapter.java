@@ -31,6 +31,7 @@ import com.example.duan1_nhom6.Model.Chat;
 import com.example.duan1_nhom6.Model.ChatList;
 import com.example.duan1_nhom6.Model.Phone;
 import com.example.duan1_nhom6.R;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -60,6 +61,7 @@ public class CartsAdapter extends RecyclerView.Adapter<CartsAdapter.CardsHolder>
     Fragment fragment;
     DatabaseReference firebaseCart;
     DatabaseReference firebasePhone;
+    FirebaseAuth firebaseUser;
     private boolean isSelectedAll;
 
     private static  int TONG = 0;
@@ -68,6 +70,8 @@ public class CartsAdapter extends RecyclerView.Adapter<CartsAdapter.CardsHolder>
         this.mCards = mCarts;
         this.firebaseCart = FirebaseDatabase.getInstance().getReference("Cart");
         this.firebasePhone = FirebaseDatabase.getInstance().getReference("Phone");
+        this.firebaseUser = FirebaseAuth.getInstance();
+
         this.mPhone = mphone;
     }
 
@@ -135,7 +139,7 @@ public class CartsAdapter extends RecyclerView.Adapter<CartsAdapter.CardsHolder>
                 Log.d("phone", carts.getId_phone());
                 for(Carts carts1:mCards){
                     if(carts1.isCheck()){
-                        firebaseCart.child(carts1.getId_phone()).removeValue();
+                        firebaseCart.child(firebaseUser.getUid()).child(carts1.getId_phone()).removeValue();
                     }
                 }
 
@@ -152,9 +156,7 @@ public class CartsAdapter extends RecyclerView.Adapter<CartsAdapter.CardsHolder>
         });
 
 
-
-
-        firebaseCart.addValueEventListener(new ValueEventListener() {
+        firebaseCart.child(firebaseUser.getUid()).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
@@ -172,7 +174,9 @@ public class CartsAdapter extends RecyclerView.Adapter<CartsAdapter.CardsHolder>
                                     int total = carts1.getAmount() + 1;
 
                                     if(total>0)
-                                    firebaseCart.child(carts.getId_phone()).child("amount").setValue(total);
+                                    firebaseCart.child(firebaseUser.getUid())
+                                            .child(carts.getId_phone())
+                                            .child("amount").setValue(total);
                                     carts.setAmount(total);
 
                                     notifyDataSetChanged();
@@ -184,8 +188,9 @@ public class CartsAdapter extends RecyclerView.Adapter<CartsAdapter.CardsHolder>
                                 @Override
                                 public void onClick(View v) {
                                     int total = carts1.getAmount() - 1;
-
-                                    firebaseCart.child(carts.getId_phone()).child("amount").setValue(total);
+                                    firebaseCart.child(firebaseUser.getUid())
+                                            .child(carts.getId_phone())
+                                            .child("amount").setValue(total);
                                     carts.setAmount(total);
 
                                     notifyDataSetChanged();

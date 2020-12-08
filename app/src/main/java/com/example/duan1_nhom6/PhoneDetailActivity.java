@@ -21,6 +21,7 @@ import com.example.duan1_nhom6.Model.ConfiGuration;
 import com.example.duan1_nhom6.Model.Phone;
 import com.example.duan1_nhom6.Model.PhoneDetail;
 import com.example.duan1_nhom6.Model.PhonePictures;
+import com.example.duan1_nhom6.Model.User;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -61,7 +62,7 @@ public class PhoneDetailActivity extends AppCompatActivity {
     Button btnAddCart;
 
     FirebaseUser firebaseUser;
-    private static int TOTAL = 0;
+    private static int TOTAL = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,7 +94,7 @@ public class PhoneDetailActivity extends AppCompatActivity {
         buttonOder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                TOTAL =0;
+                TOTAL =1;
                 final DialogPlus dialog = DialogPlus.newDialog(v.getContext())
                         .setGravity(Gravity.BOTTOM)
                         .setContentHolder(new ViewHolder(R.layout.dialog_order))
@@ -121,7 +122,7 @@ public class PhoneDetailActivity extends AppCompatActivity {
 
                     @Override
                     public void onClick(View v) {
-                        if(TOTAL>0) {
+                        if(TOTAL>1) {
                             TOTAL--;
                             TextAmount.setText(String.valueOf(TOTAL));
 
@@ -138,9 +139,16 @@ public class PhoneDetailActivity extends AppCompatActivity {
                         if(snapshot.exists()){
                             Phone phone = snapshot.getValue(Phone.class);
                             if(phone.getImage()!=null){
+                                Locale locale = new Locale("vi","VN");
+                                DecimalFormat nf = (DecimalFormat) DecimalFormat.getCurrencyInstance(locale);
+                                DecimalFormatSymbols formatSymbols = new DecimalFormatSymbols();
+                                formatSymbols.setCurrencySymbol("");
+                                nf.setDecimalFormatSymbols(formatSymbols);
+
                                 Picasso.get().load(phone.getImage()).into(imagecart);
                                 TextName.setText(phone.getPhonename());
-                                TextPrice.setText(String.valueOf(phone.getGiatien()));
+                                TextPrice.setText(nf.format(phone.getGiatien())+" vnd");
+
                             }
                         }
                     }
@@ -151,25 +159,44 @@ public class PhoneDetailActivity extends AppCompatActivity {
                     }
                 });
 
-                firebaseCart.child(phoneid).addValueEventListener(new ValueEventListener() {
+                firebaseCart.child(firebaseUser.getUid()).addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
-                            if(!snapshot.exists()){
+                            if(snapshot.exists()){
+                                for(DataSnapshot dataSnapshot:snapshot.getChildren()){
+                                    Carts carts = dataSnapshot.getValue(Carts.class);
+                                    if(!carts.getId_phone().equals(phoneid)){
+                                        btnAddCart.setOnClickListener(new View.OnClickListener() {
+                                            @Override
+                                            public void onClick(View v) {
+                                                final String id_user = firebaseUser.getUid();
+                                                final int amount = Integer.parseInt(TextAmount.getText().toString());
+                                                Carts carts1 = new Carts(amount,phoneid,id_user);
+                                                firebaseCart.child(id_user).child(phoneid).setValue(carts1.toMap());
+                                                Toast.makeText(PhoneDetailActivity.this, "Đặt hàng thành công", Toast.LENGTH_SHORT).show();
+
+                                            }
+                                        });
+                                    }else{
+                                        btnAddCart.setOnClickListener(new View.OnClickListener() {
+                                            @Override
+                                            public void onClick(View v) {
+                                                Toast.makeText(PhoneDetailActivity.this, "Bạn đã đặt sản phẩm này", Toast.LENGTH_SHORT).show();
+
+                                            }
+                                        });
+                                    }
+                                }
+                            }else{
                                 btnAddCart.setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View v) {
                                         final String id_user = firebaseUser.getUid();
                                         final int amount = Integer.parseInt(TextAmount.getText().toString());
                                         Carts carts1 = new Carts(amount,phoneid,id_user);
-                                        firebaseCart.child(phoneid).setValue(carts1.toMap());
+                                        firebaseCart.child(id_user).child(phoneid).setValue(carts1.toMap());
+                                        Toast.makeText(PhoneDetailActivity.this, "Đặt hàng thành công", Toast.LENGTH_SHORT).show();
 
-                                    }
-                                });
-                            }else{
-                                btnAddCart.setOnClickListener(new View.OnClickListener() {
-                                    @Override
-                                    public void onClick(View v) {
-                                        Toast.makeText(PhoneDetailActivity.this, "đã có sản phẩm này", Toast.LENGTH_SHORT).show();
                                     }
                                 });
                             }

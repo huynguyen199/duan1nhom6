@@ -3,6 +3,7 @@ package com.example.duan1_nhom6.Fragment;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -60,9 +61,19 @@ public class CartFragment extends Fragment {
     public CheckBox checkBox;
     Button btndel,btnPay;
     TextView texttotal;
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        Log.i("Main", "onCreate()");
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        Log.i("Main", "onCreateView()");
+
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_cart, container, false);
         recyclerView = view.findViewById(R.id.recyclerview_carts);
@@ -92,7 +103,7 @@ public class CartFragment extends Fragment {
         });
 
 
-                firebaseCart.addListenerForSingleValueEvent(new ValueEventListener() {
+                firebaseCart.child(firebaseUser.getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         listCart.clear();
@@ -100,11 +111,8 @@ public class CartFragment extends Fragment {
                         if(snapshot.exists()){
                             for(DataSnapshot dataSnapshot :snapshot.getChildren()) {
                                  carts = dataSnapshot.getValue(Carts.class);
-                                Log.d("amount", "onDataChange: "+carts.getAmount());
-                                if(carts.getId_user().equals(firebaseUser.getUid())) {
-                                    listCart.add(carts);
+                                 listCart.add(carts);
 
-                                }
                             }
                             listPhone();
 

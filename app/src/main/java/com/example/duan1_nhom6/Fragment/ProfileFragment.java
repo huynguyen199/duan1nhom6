@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.duan1_nhom6.BuildConfig;
 import com.example.duan1_nhom6.ChangePasswordActivity;
 import com.example.duan1_nhom6.FeedBackActivity;
 import com.example.duan1_nhom6.LoginActivity;
@@ -22,6 +23,7 @@ import com.example.duan1_nhom6.Model.User;
 import com.example.duan1_nhom6.PhoneDetailActivity;
 import com.example.duan1_nhom6.R;
 import com.example.duan1_nhom6.TransactionHistoryActivity;
+import com.facebook.login.LoginManager;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -82,8 +84,10 @@ public class ProfileFragment extends Fragment {
                             break;
                         case R.id.nav_logout:
                             firebaseUser.child(Uid).child("status").setValue("offline");
+                            LoginManager.getInstance().logOut();
                             FirebaseAuth.getInstance().signOut();
-                            i = new Intent(getContext(),LoginActivity.class);
+                            i = new Intent(getActivity(),LoginActivity.class);
+
                             break;
                     }
                     if(i!=null){
@@ -112,8 +116,15 @@ public class ProfileFragment extends Fragment {
                     if(user!=null){
                         try {
                             fullname.setText(user.getFullname());
+                            FirebaseUser mUser = FirebaseAuth.getInstance().getCurrentUser();
+                            if (BuildConfig.DEBUG) Log.d("ProfileFragment", "mUser:" + mUser.getEmail());
+                            if(mUser.getEmail()!=null) {
+                                Email.setText(mUser.getEmail());
+                            }else{
+                                Email.setText(mUser.getPhoneNumber());
+                            }
 
-                            Email.setText(FirebaseAuth.getInstance().getCurrentUser().getEmail());
+
                         }catch (Exception e){
 
                         }

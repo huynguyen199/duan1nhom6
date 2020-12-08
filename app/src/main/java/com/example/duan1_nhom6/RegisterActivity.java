@@ -59,6 +59,7 @@ public class RegisterActivity extends AppCompatActivity {
 
         auth = FirebaseAuth.getInstance();
 
+
         regis.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -17,7 +17,6 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class TransactionHistoryActivity extends AppCompatActivity {
     RecyclerView recyclerView;
-    FloatingActionButton floatingActionButton;
     FirebaseRecyclerAdapter<TrasHistory, TrasHistoryAdapter.HistoryHolder> adapter;
 
     @Override
@@ -44,7 +43,6 @@ public class TransactionHistoryActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setHasFixedSize(true);
 
-        floatingActionButton = findViewById(R.id.floating);
         final FirebaseRecyclerOptions<TrasHistory> options = new FirebaseRecyclerOptions.Builder<TrasHistory>()
                 .setQuery(FirebaseDatabase.getInstance().getReference().child("TrasHistory"),TrasHistory.class)
                 .build();
