@@ -32,4 +32,11 @@
     <string name="register">Đăng ký</string>
     <string name="ho_va_ten">ho va ten</string>
     <string name="so_dien_thoai">so dien thoai</string>
+
+
+    //facebook
+    <string name="facebook_app_id">779089929310945</string>
+    <string name="fb_login_protocol_scheme">fb779089929310945</string>
+    <string name="statistical">Thống kê</string>
+
 </resources>

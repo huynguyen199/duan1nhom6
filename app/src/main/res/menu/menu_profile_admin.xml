@@ -23,10 +23,15 @@
             />
 
         <item
+            android:id="@+id/nav_statistical"
+            android:title="@string/statistical"
+            />
+
+        <item
             android:id="@+id/nav_logout"
             android:title="@string/menu_logout"
-
             />
+
         </menu>
         </item>
     </group>
