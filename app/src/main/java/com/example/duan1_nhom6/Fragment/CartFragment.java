@@ -18,6 +18,7 @@ import android.widget.CompoundButton;
 import android.widget.TextView;
 
 import com.example.duan1_nhom6.Adapter.CartsAdapter;
+import com.example.duan1_nhom6.BuildConfig;
 import com.example.duan1_nhom6.Dao.DaoFeedBack;
 import com.example.duan1_nhom6.Dao.DaoPhone;
 import com.example.duan1_nhom6.Model.Carts;
@@ -44,7 +45,7 @@ import java.util.Locale;
 
 
 public class CartFragment extends Fragment {
-    public SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
+    public SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
     FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
     DatabaseReference databaseTrasHistory;
     private RecyclerView recyclerView;
@@ -134,13 +135,14 @@ public class CartFragment extends Fragment {
 
 
 
-        firebaseCart.addValueEventListener(new ValueEventListener() {
+        firebaseCart.child(firebaseUser.getUid()).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 TOTAL = 0;
                 if(snapshot.exists()){
                     for(DataSnapshot dataSnapshot:snapshot.getChildren()){
                         final Carts carts1 = dataSnapshot.getValue(Carts.class);
+                        if (BuildConfig.DEBUG) Log.d("CartFragment", "carts1:" + carts1.getId_phone());
                         firebasePhone.child(carts1.getId_phone()).addValueEventListener(new ValueEventListener() {
                             @Override
                             public void onDataChange(@NonNull DataSnapshot snapshot) {
