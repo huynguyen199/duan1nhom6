@@ -3,61 +3,30 @@
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent">
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        style="@style/Rlt_dialog_manager_user"
         >
         <TextView
             android:id="@+id/updateUsers"
-            android:layout_width="wrap_content"
-            android:fontFamily="@font/dosis_bold"
-            android:text="Cập nhật người dùng"
-            android:textColor="@color/colorBlack"
-            android:textSize="20dp"
-            android:layout_centerHorizontal="true"
-            android:layout_height="wrap_content"
+            style="@style/tv_dialog_manager_user"
             />
 
         <EditText
-            android:layout_marginTop="10dp"
             android:id="@+id/edit_fullname"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/updateUsers"
-            android:fontFamily="@font/dosis_bold"
-            android:hint="Tên người dùng" />
+            style="@style/edt1_dialog_manager_user"/>
 
         <EditText
             android:id="@+id/edit_idPhone"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/edit_fullname"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/dosis_bold"
-
-            android:hint="Số điện thoại" />
+            style="@style/edt2_dialog_manager_user" />
 
         <Spinner
             android:id="@+id/spinner_role"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_below="@+id/edit_idPhone"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/dosis_bold"
+            style="@style/spinner_dialog_manager_user"
             />
 
 
         <Button
             android:id="@+id/updateBtn"
-            android:layout_below="@+id/spinner_role"
-            android:layout_width="match_parent"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/dosis_bold"
-            android:text="Cập nhật"
-            android:textSize="20dp"
-            android:background="@color/colorBlue"
-            android:textColor="@color/colorWhite"
-            android:layout_height="wrap_content"
+            style="@style/btn_dialog_manager_user"
             />
     </RelativeLayout>
 </RelativeLayout>

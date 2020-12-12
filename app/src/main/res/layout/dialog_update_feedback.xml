@@ -3,50 +3,25 @@
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent">
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+       style="@style/Rlt_dialog_update_feedback"
         >
 
         <EditText
             android:id="@+id/edit_price"
-            android:layout_width="match_parent"
-            android:fontFamily="@font/dosis_bold"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/edit_idPhone"
-            android:hint="Lý do"
-            android:layout_marginTop="10dp"
+            style="@style/edt1_dialog_update_feedback"
             />
 
         <EditText
             android:id="@+id/edit_producer"
-            android:layout_width="match_parent"
-            android:fontFamily="@font/dosis_bold"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_below="@+id/edit_price"
-            android:hint="Miêu tả"
+            style="@style/edt2_dialog_update_feedback"
             />
         <EditText
             android:id="@+id/edit_phoneName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/dosis_bold"
-            android:layout_below="@+id/edit_producer"
-            android:hint="mã id người gửi"
+            style="@style/edt3_dialog_update_feedback"
             />
         <Button
             android:id="@+id/updatePhone"
-            android:layout_below="@+id/edit_phoneName"
-            android:layout_width="match_parent"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/dosis_bold"
-            android:text="thêm"
-            android:textSize="20dp"
-            android:background="@color/colorBlue"
-             android:textColor="@color/colorWhite"
-            android:layout_height="wrap_content"
+            style="@style/btn_dialog_update_feedback"
             />
     </RelativeLayout>
 </RelativeLayout>

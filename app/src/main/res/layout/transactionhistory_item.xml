@@ -6,24 +6,11 @@
     >
     <TextView
         android:id="@+id/textvDate"
-        android:layout_width="wrap_content"
-        android:text="Ngày mua"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:textColor="@color/colorBlack"
-        android:fontFamily="@font/dosis_bold"
-        android:layout_margin="10dp"
+        style="@style/tv1_transactionhistory"
         />
     <TextView
         android:id="@+id/textvTotal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_margin="10dp"
-        android:layout_alignParentRight="true"
-        android:fontFamily="@font/dosis_bold"
-        android:text="Tông tiền"
-        android:textColor="@color/colorBlack"
+        style="@style/tv2_transactionhistory"
         />
 
 </RelativeLayout>

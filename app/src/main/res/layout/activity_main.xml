@@ -9,19 +9,12 @@
 
     <FrameLayout
         android:id="@+id/fragment_container"
-        android:layout_width="match_parent"
-
-        android:layout_height="match_parent"
-        android:layout_above="@+id/bottom_navigation"
+        style="@style/fragment_container"
         />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
-        android:background="@drawable/rounded"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-
-        android:layout_alignParentBottom="true"
+        style="@style/bottom_navigation"
         app:itemIconTint="@color/nav_color"
         app:itemTextColor="@color/nav_color"
         app:layout_constraintBottom_toBottomOf="parent"

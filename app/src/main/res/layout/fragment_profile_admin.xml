@@ -9,9 +9,7 @@
 
         <com.google.android.material.navigation.NavigationView
             android:id="@+id/navigation_options"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@+id/relative_profile2"
+            style="@style/Nv_fragment_profile_admin"
             app:headerLayout="@layout/nav_header"
             app:menu="@menu/menu_profile_admin"
 

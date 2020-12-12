@@ -8,38 +8,20 @@
 
     <Toolbar
         android:id="@+id/toolbar_transaction_history"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorBlue"
-        android:layout_alignParentTop="true"
+        style="@style/toolbar_manager_phone"
         />
 
     <TextView
         android:id="@+id/text_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/toolbar_transaction_history"
-        android:layout_centerHorizontal="true"
-        android:fontFamily="@font/dosis_bold"
-        android:text="Quản lý điện thoại"
-        android:textColor="@color/colorBlack"
-        android:textSize="30dp" />
+        style="@style/tv_manager_phone" />
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview_manager_phone"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/text_title"
+        style="@style/Rcv_manager_phone"
         />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:layout_width="wrap_content"
         android:id="@+id/floating"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_baseline_add_24"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="42dp"
-        android:layout_marginBottom="42dp"
+        style="@style/floating_manager_phone"
         />
 
 

@@ -27,5 +27,2064 @@
 
     </style>
 
+//actvivity_change_password
+
+    <style name="toolbar_change_password">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/colorBlue</item>
+
+    </style>
+
+    <style name="tv_change_password">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_below">@+id/toolbar_changepass</item>
+        <item name="android:text">Đổi mật khẩu</item>
+
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:textSize" >30sp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:textColor">@color/colorBlack</item>
+    </style>
+
+    <style name="edt_change_password">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:inputType">textPassword</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:layout_below">@+id/title</item>
+        <item name="android:hint">Mật khẩu cũ</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:layout_margin">10dp</item>
+    </style>
+
+    <style name="edt2_change_password">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:inputType">textPassword</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:layout_below">@+id/edit_oldpass</item>
+        <item name="android:hint">Mật khẩu mới</item>
+        <item name="android:layout_margin">10dp</item>
+    </style>
+
+    <style name="edt3_change_password">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:inputType">textPassword</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:layout_below">@+id/edit_newpass</item>
+        <item name="android:hint">Nhập lại mật khẩu mới</item>
+        <item name="android:layout_margin">10dp</item>
+    </style>
+
+    <style name="btn_change_password">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:layout_below">@+id/edit_newpass_again</item>
+        <item name="android:text">Đổi mật khẩu</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:background">@color/colorBlue</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:layout_margin">10dp</item>
+    </style>
+
+    //activity_feed_back
+
+    <style name="toolbar_feed_back">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/colorBlue</item>
+        <item name="android:layout_alignParentTop">true</item>
+    </style>
+
+    <style name="tv_feed_back">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:text">Phản Hồi</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:textSize" >30sp</item>
+        <item name="android:layout_below">@+id/toolbar_feedback</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:textColor">@color/colorBlack</item>
+    </style>
+
+    <style name="Rlt_feed_back">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_below">@+id/title</item>
+    </style>
+
+    <style name="edt1_feed_back">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:hint">Lý do</item>
+        <item name="android:layout_margin">10dp</item>
+    </style>
+
+    <style name="edt2_feed_back">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">400dp</item>
+        <item name="android:hint">Miêu tả</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:lines">10</item>
+        <item name="android:gravity">start|top</item>
+        <item name="android:inputType">textLongMessage</item>
+        <item name="android:layout_below">@id/edit_price</item>
+    </style>
+
+    <style name="btn_feed_back">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:text">Gửi</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:background">@color/colorBlue</item>
+        <item name="android:layout_below">@+id/edit_producer</item>
+    </style>
+
+    //activity_forgot_password
+
+    <style name="toolbar_forgot_password">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentStart">true</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:background">@color/colorBlue</item>
+        <item name="android:minHeight">?attr/actionBarSize</item>
+        <item name="android:theme">?attr/actionBarTheme</item>
+    </style>
+
+    <style name="view1_forgot_password">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">150dp</item>
+        <item name="android:layout_below">@id/toolbar</item>
+        <item name="android:background">@color/colorBlue</item>
+    </style>
+
+    <style name="view2_forgot_password">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:layout_below">@id/topView</item>
+        <item name="android:background">@drawable/wave</item>
+        <item name="android:layout_marginTop">-1dp</item>
+    </style>
+
+    <style name="tv_forgot_password">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">100dp</item>
+        <item name="android:fontFamily">@font/regular</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_marginLeft">32dp</item>
+        <item name="android:layout_marginTop">85dp</item>
+        <item name="android:text">Quên mật khẩu</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize" >35sp</item>
+    </style>
+
+    <style name="edt1_forgot_password">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_below">@id/view5</item>
+        <item name="android:layout_marginStart">32dp</item>
+        <item name="android:layout_marginTop">-2dp</item>
+        <item name="android:layout_marginEnd">32dp</item>
+        <item name="android:background">@drawable/round_border</item>
+        <item name="android:drawableStart">@drawable/ic_email</item>
+        <item name="android:drawablePadding">16dp</item>
+        <item name="android:hint">@string/email</item>
+        <item name="android:padding">16dp</item>
+    </style>
+
+    <style name="btn_forgot_password">
+        <item name="android:layout_marginLeft">32dp</item>
+        <item name="android:layout_marginRight">32dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_below">@id/ed_Email</item>
+        <item name="android:background">@drawable/round_bg</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:text">Gửi password vào email</item>
+    </style>
+
+    <style name="pro_forgot_password">
+        <item name="android:indeterminateTint">#32ECEC</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_below">@+id/btn_send_email</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    //activity_login
+
+    <style name="view1_login">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">150dp</item>
+        <item name="android:background">@color/colorBlue</item>
+    </style>
+
+    <style name="view2_login">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:background">@drawable/wave</item>
+    </style>
+
+    <style name="img_login">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">32dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:contentDescription">@string/top_icon</item>
+    </style>
+
+    <style name="tv_login">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">32dp</item>'
+        <item name="android:layout_marginLeft">32dp</item>
+        <item name="android:layout_marginTop">48dp</item>
+        <item name="android:fontFamily">@font/regular</item>
+        <item name="android:text">ĐĂNG NHẬP HỆ THỐNG</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">25sp</item>
+    </style>
+
+    <style name="edt1_login">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">32dp</item>
+        <item name="android:layout_marginEnd">32dp</item>
+        <item name="android:background">@drawable/round_border</item>
+        <item name="android:drawableStart">@drawable/ic_email</item>
+        <item name="android:drawableLeft">@drawable/ic_email</item>
+        <item name="android:drawablePadding">16dp</item>
+        <item name="android:hint">Email</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="edt2_login">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">32dp</item>
+        <item name="android:layout_marginEnd">32dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:background">@drawable/round_border</item>
+        <item name="android:drawableStart">@drawable/ic_lock</item>
+        <item name="android:drawableLeft">@drawable/ic_lock</item>
+        <item name="android:drawablePadding">16dp</item>
+        <item name="android:hint">Password</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:inputType">textPassword</item>
+    </style>
+
+    <style name="check_login">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">40dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:text">Lưu mật khẩu</item>
+        <item name="android:fontFamily">@font/regular</item>
+    </style>
+
+    <style name="btn_login">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">32dp</item>
+        <item name="android:layout_marginEnd">32dp</item>
+        <item name="android:layout_marginTop">50dp</item>
+        <item name="android:fontFamily">@font/regular</item>
+        <item name="android:text">@string/login</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:background">@drawable/round_bg</item>
+    </style>
+
+    <style name="btn_dangky">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">32dp</item>
+        <item name="android:layout_marginEnd">32dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:fontFamily">@font/regular</item>
+        <item name="android:text">@string/register</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:background">@drawable/round_bg</item>
+    </style>
+
+    <style name="tv_forgot_login">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">32dp</item>
+        <item name="android:layout_marginEnd">32dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:text">@string/forgot_password</item>
+        <item name="android:fontFamily">@font/regular</item>
+        <item name="android:textColor">@color/colorBlue</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="CardView_fb">
+        <item name="android:layout_width">70dp</item>
+        <item name="android:layout_height">70dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginEnd">104dp</item>
+    </style>
+
+    <style name="btn_loginfb">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <style name="img_fb">
+        <item name="android:layout_width">70dp</item>
+        <item name="android:layout_height">70dp</item>
+        <item name="android:src">@drawable/ic_baseline_facebook_24</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="CardView_gg">
+        <item name="android:layout_width">70dp</item>
+        <item name="android:layout_height">70dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginStart">104dp</item>
+    </style>
+
+    <style name="btn_logingg">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <style name="img_gg">
+        <item name="android:layout_width">70dp</item>
+        <item name="android:layout_height">70dp</item>
+        <item name="android:src">@drawable/ic_google</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    //acivity_main
+    <style name="fragment_container">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_above">@+id/bottom_navigation</item>
+    </style>
+
+    <style name="bottom_navigation">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">70dp</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:background">@drawable/rounded</item>
+    </style>
+
+    //activity_manager_feed_back
+
+    <style name="toolbar_manager_feed_back">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:background">@color/colorBlue</item>
+    </style>
+
+    <style name="tv_manager_feed_back">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_below">@id/toolbar_transaction_history</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:text">Quản lý phản hồi</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">30sp</item>
+    </style>
+
+    <style name="Rcv_manager_feed_back">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_below">@+id/text_title</item>
+    </style>
+
+    <style name="floating_manager_feed_back">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:src">@drawable/ic_baseline_add_24</item>
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_marginEnd">42dp</item>
+        <item name="android:layout_marginBottom">42dp</item>
+    </style>
+
+    //activity_manager_phone
+
+    <style name="toolbar_manager_phone">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:background">@color/colorBlue</item>
+    </style>
+
+    <style name="tv_manager_phone">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_below">@id/toolbar_transaction_history</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:text">Quản lý điện thoại</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">30sp</item>
+    </style>
+
+    <style name="Rcv_manager_phone">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_below">@+id/text_title</item>
+    </style>
+
+    <style name="floating_manager_phone">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:src">@drawable/ic_baseline_add_24</item>
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_marginEnd">42dp</item>
+        <item name="android:layout_marginBottom">42dp</item>
+    </style>
+
+    //activity_manager_user
+
+    <style name="toolbar_manager_user">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/colorBlue</item>>
+        <item name="android:layout_alignParentTop">true</item>
+    </style>
+
+    <style name="tv_manager_user">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_below">@id/toolbar_transaction_history</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:text">Quản lý người dùng</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">30sp</item>
+    </style>
+
+    <style name="Rcv_manager_user">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_below">@+id/text_title</item>
+    </style>
+
+    //activity_message
+
+    <style name="toolbar_message">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/background_toolbar</item>
+    </style>
+
+    <style name="tv_message">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:text">Toolbar Title</item>
+    </style>
+
+    <style name="img_message">
+        <item name="android:layout_width">10dp</item>
+        <item name="android:layout_height">10dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@drawable/background_right</item>
+        <item name="android:layout_marginLeft">20dp</item>
+    </style>
+
+    <style name="Rcv_message">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_below">@+id/toolbar</item>
+        <item name="android:layout_above">@id/relative_bottom</item>
+    </style>
+
+    <style name="Rlt_message">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:background">@drawable/background_editext_message</item>
+        <item name="android:layout_alignParentBottom">true</item>
+    </style>
+
+    <style name="edt_message">
+        <item name="android:layout_width">350dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:layout_marginLeft">22dp</item>
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:hint">Nhập văn bản</item>
+    </style>
+
+    <style name="btn_message">
+        <item name="android:layout_width">45dp</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:background">@drawable/ic_baseline_send_24</item>
+        <item name="android:layout_toRightOf">@+id/edit_message</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    //activity_phone_detail
+
+    <style name="toolbar_phone_detail">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/colorBlue</item>
+    </style>
+
+    <style name="scroll_phone_detail">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_above">@id/add_carts</item>
+        <item name="android:layout_below">@+id/toolbar_phone_details</item>
+        <item name="android:layout_marginTop">-3dp</item>
+        <item name="android:layout_marginBottom">3dp</item>
+    </style>
+
+    <style name="Rlt_phone_detail">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="img_phone_detail">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">200dp</item>
+        <item name="android:src">@mipmap/ic_launcher</item>
+    </style>
+
+    <style name="tv_phone_detail">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_below">@id/image_phone</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:fontFamily">@font/regular</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:background">@color/colorWhite</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:text">Ten dien thoai</item>
+    </style>
+
+    <style name="tv2_phone_detail">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_below">@+id/text_title</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:text">Giá điện thoại</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:background">@color/colorWhite</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="tv3_phone_detail">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_below">@+id/text_price</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:text">Bảo hành</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:background">@color/colorWhite</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="tv4_phone_detail">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_below">@+id/text_guegrantee</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:text">Giới thiệu</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:background">@color/colorWhite</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="tv5_phone_detail">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:text">Giới thiệu</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@color/colorWhite</item>
+        <item name="android:layout_below">@+id/text_title_introduce</item>
+    </style>
+
+    <style name="tv6_phone_detail">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/colorWhite</item>
+        <item name="android:gravity">center</item>
+        <item name="android:text">Mô tả</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_below">@+id/text_introduce</item>
+    </style>
+
+    <style name="tv7_phone_detail">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:text">Màn hình :</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:background">@color/colorWhite</item>
+        <item name="android:layout_below">@+id/text_description</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:layout_marginTop">3dp</item>
+        <item name="android:paddingLeft">20dp</item>
+    </style>
+
+    <style name="tv8_phone_detail">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:layout_below">@+id/text_manhinh</item>
+        <item name="android:text">Hệ điều hành</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:background">@color/colorWhite</item>
+        <item name="android:layout_marginTop">3dp</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="tv9_phone_detail">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:layout_below">@+id/text_hedieuhanh</item>
+        <item name="android:text">Camera sau :</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:background">@color/colorWhite</item>
+        <item name="android:layout_marginTop">3dp</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="tv10_phone_detail">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:layout_below">@+id/text_camera_sau</item>
+        <item name="android:text">Camera truoc :</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:background">@color/colorWhite</item>
+        <item name="android:layout_marginTop">3dp</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+
+    <style name="tv11_phone_detail">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:layout_below">@+id/text_camera_truoc</item>
+        <item name="android:text">CPU :</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:background">@color/colorWhite</item>
+        <item name="android:layout_marginTop">3dp</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="tv12_phone_detail">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:layout_below">@+id/text_gpu</item>
+        <item name="android:text">Ram :</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:background">@color/colorWhite</item>
+        <item name="android:layout_marginTop">3dp</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="tv13_phone_detail">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:layout_below">@+id/text_ram</item>
+        <item name="android:text">Bộ nhớ trong :</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:background">@color/colorWhite</item>
+        <item name="android:layout_marginTop">3dp</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="tv14_phone_detail">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:layout_below">@+id/text_bonhotrong</item>
+        <item name="android:text">Thẻ sim :</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:background">@color/colorWhite</item>
+        <item name="android:layout_marginTop">3dp</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="tv15_phone_detail">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:layout_below">@+id/text_thesim</item>
+        <item name="android:text">Dung lượng pin :</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:background">@color/colorWhite</item>
+        <item name="android:layout_marginTop">3dp</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="btn_phone_detail">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:text">@string/addCarts</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:background">@color/colorBlue</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_alignParentBottom">true</item>
+    </style>
+
+    //activitty_register
+
+    <style name="toolbar_register">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentStart">true</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:background">@color/colorBlue</item>
+        <item name="android:minHeight">?attr/actionBarSize</item>
+        <item name="android:theme">?attr/actionBarTheme</item>
+    </style>
+
+    <style name="view1_register">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">150dp</item>
+        <item name="android:layout_below">@id/toolbar</item>
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:background">@color/colorBlue</item>
+    </style>
+
+    <style name="view2_register">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:layout_below">@id/topView</item>
+        <item name="android:layout_marginTop">-1dp</item>
+        <item name="android:background">@drawable/wave</item>
+    </style>
+
+    <style name="tv_register">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">100dp</item>
+        <item name="android:fontFamily">@font/regular</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_marginLeft">32dp</item>
+        <item name="android:layout_marginTop">85dp</item>
+        <item name="android:text">Đăng kí</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">60sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="edt1_register">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_below">@id/view5</item>
+        <item name="android:layout_marginStart">32dp</item>
+        <item name="android:layout_marginTop">-2dp</item>
+        <item name="android:layout_marginEnd">32dp</item>
+        <item name="android:background">@drawable/round_border</item>
+        <item name="android:drawableStart">@drawable/ic_email</item>
+        <item name="android:drawablePadding">16dp</item>
+        <item name="android:hint">@string/hoten</item>
+        <item name="android:padding">16dp</item>
+    </style>
+
+    <style name="edt2_register">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_below">@+id/edUserHoTen</item>
+        <item name="android:layout_marginStart">32dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginEnd">32dp</item>
+        <item name="android:background">@drawable/round_border</item>
+        <item name="android:drawableStart">@drawable/ic_lock</item>
+        <item name="android:drawablePadding">16dp</item>
+        <item name="android:hint">@string/sdt</item>
+        <item name="android:padding">16dp</item>
+    </style>
+
+    <style name="edt3_register">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_below">@id/edSdt</item>
+        <item name="android:layout_marginStart">32dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginEnd">32dp</item>
+        <item name="android:background">@drawable/round_border</item>
+        <item name="android:drawableStart">@drawable/ic_lock</item>
+        <item name="android:drawablePadding">16dp</item>
+        <item name="android:hint">@string/email</item>
+        <item name="android:padding">16dp</item>
+    </style>
+
+    <style name="edt4_register">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_below">@+id/edEmail</item>
+        <item name="android:layout_marginStart">32dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginEnd">32dp</item>
+        <item name="android:background">@drawable/round_border</item>
+        <item name="android:drawableStart">@drawable/ic_lock</item>
+        <item name="android:drawablePadding">16dp</item>
+        <item name="android:hint">@string/mk</item>
+        <item name="android:inputType">textPassword</item>
+
+        <item name="android:padding">16dp</item>
+    </style>
+
+    <style name="edt5_register">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:inputType">textPassword</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_below">@+id/edMk</item>
+        <item name="android:layout_marginStart">32dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginEnd">32dp</item>
+        <item name="android:background">@drawable/round_border</item>
+        <item name="android:drawableStart">@drawable/ic_lock</item>
+        <item name="android:drawablePadding">16dp</item>
+        <item name="android:hint">@string/nhaplai</item>
+        <item name="android:padding">16dp</item>
+    </style>
+
+    <style name="btn_register">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_below">@id/ednhaplai</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:layout_margin">16dp</item>
+        <item name="android:background">@drawable/round_bg</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:text">Đăng kí</item>
+    </style>
+
+    //activity_register_profile
+
+    <style name="toolbar_register_profile">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentStart">true</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:background">@color/colorBlue</item>
+        <item name="android:minHeight">?attr/actionBarSize</item>
+        <item name="android:theme">?attr/actionBarTheme</item>
+    </style>
+
+    <style name="view1_register_profile">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">150dp</item>
+        <item name="android:layout_below">@id/toolbar</item>
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:background">@color/colorBlue</item>
+    </style>
+
+    <style name="view2_register_profile">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:layout_below">@id/topView</item>
+        <item name="android:layout_marginTop">-1dp</item>
+        <item name="android:background">@drawable/wave</item>
+    </style>
+
+    <style name="tv_register_profile">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">100dp</item>
+        <item name="android:fontFamily">@font/regular</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_marginLeft">32dp</item>
+        <item name="android:layout_marginTop">85dp</item>
+        <item name="android:text">Đăng kí</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">60sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="edt1_register_profile">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_below">@id/view5</item>
+        <item name="android:layout_marginStart">32dp</item>
+        <item name="android:layout_marginTop">-2dp</item>
+        <item name="android:layout_marginEnd">32dp</item>
+        <item name="android:background">@drawable/round_border</item>
+        <item name="android:drawableStart">@drawable/ic_email</item>
+        <item name="android:drawablePadding">16dp</item>
+        <item name="android:hint">@string/hoten</item>
+        <item name="android:padding">16dp</item>
+    </style>
+
+    <style name="edt2_register_profile">
+        <item name="android:layout_below">@+id/edUserHoTen</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/round_border</item>
+        <item name="android:hint">@string/sdt</item>
+        <item name="android:layout_marginStart">32dp</item>
+        <item name="android:layout_marginEnd">32dp</item>
+        <item name="android:drawablePadding">16dp</item>
+        <item name="android:drawableStart">@drawable/ic_lock</item>
+    </style>
+
+    <style name="btn_register_profile">
+        <item name="android:padding">8dp</item>
+        <item name="android:layout_marginTop">32dp</item>
+        <item name="android:layout_below">@id/edSdt</item>
+        <item name="android:background">@drawable/round_bg</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:text">Đăng kí</item>
+        <item name="android:layout_marginRight">32dp</item>
+        <item name="android:layout_marginLeft">32dp</item>
+    </style>
+
+    //activity_send_message
+
+    <style name="Rlt_send_message">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="Rlt_top">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:background">@color/colorWhite</item>
+
+    </style>
+
+    <style name="img_send_message">
+        <item name="android:layout_width">70dp</item>
+        <item name="android:layout_height">70dp</item>
+        <item name="android:src">@mipmap/ic_launcher</item>
+    </style>
+
+    <style name="tv_send_message">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginTop">22dp</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_toRightOf">@+id/image_user</item>
+        <item name="android:text">Nguyễn Văn A</item>
+    </style>
+
+    <style name="Rcv_send_message">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_below">@+id/relative_top</item>
+        <item name="android:layout_above">@+id/linerbottom</item>
+    </style>
+
+    <style name="Ln_send_message">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="edt_send_message">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentBottom">true</item>
+    </style>
+
+    <style name="btn_send_message">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    //activity_transaction_history
+
+    <style name="toolbar_transaction_history">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:background">@color/colorBlue</item>
+    </style>
+
+    <style name="tv_trasaction_history">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_below">@id/toolbar_transaction_history</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:text">Lịch sử giao dịch</item>
+    </style>
+
+    <style name="Rcv_trasaction_history">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_below">@+id/text_title</item>
+    </style>
+
+    //carts_item
+
+
+    //chat_item_left
+
+    <style name="img_chat_item_left">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:src">@mipmap/ic_launcher</item>
+    </style>
+
+    <style name="tv_chat_item_left">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_toRightOf">@+id/profile_image</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:text">hello</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:background">@drawable/background_left</item>
+    </style>
+
+    <style name="tv2_chat_item_left">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_below">@+id/show_massge</item>
+        <item name="android:layout_alignParentStart">true</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_marginStart">10dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginTop">9dp</item>
+        <item name="android:text">Textview</item>
+    </style>
+
+    //chat_item_right
+
+    <style name="Rlt_chat_item_right">
+        <item name="android:layout_width">300dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:layout_alignParentRight">true</item>
+    </style>
+
+    <style name="img_chat_item_right">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <style name="tv_chat_item_right">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/background_right</item>
+        <item name="android:text">hello</item>
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#fff</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:layout_alignParentRight">true</item>
+    </style>
+
+    <style name="tv2_chat_item_right">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_below">@+id/relative</item>
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginEnd">7dp</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:layout_marginRight">7dp</item>
+        <item name="android:text">hello</item>
+    </style>
+
+    //dialog_feedback
+
+    <style name="Rlt_dialog_feedback">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">10dp</item>
+    </style>
+
+    <style name="edt_dialog_feedback">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:hint">Mã id phản hồi</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+    </style>
+
+    <style name="edt2_dialog_feedback">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:layout_below">@+id/edit_idPhone</item>
+        <item name="android:hint">Lý do</item>
+        <item name="android:layout_marginTop">10dp</item>
+    </style>
+
+    <style name="edt3_dialog_feedback">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:layout_below">@+id/edit_price</item>
+        <item name="android:hint">Miêu tả</item>
+        <item name="android:layout_marginTop">10dp</item>
+    </style>
+
+    <style name="edt4_dialog_feedback">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:layout_below">@+id/edit_producer</item>
+        <item name="android:hint">mã id người gửi</item>
+        <item name="android:layout_marginTop">10dp</item>
+    </style>
+
+    <style name="btn_dialog_feedbackk">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:layout_below">@+id/edit_phoneName</item>
+        <item name="android:background">@color/colorBlue</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:text">Thêm</item>
+    </style>
+
+    //dialog_insert_manager_phone
+
+    <style name="Rlt_insert_manager_phone">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">10dp</item>
+    </style>
+
+    <style name="tv_insert_manager_phone">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:text">Thêm sản phẩm</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+    <style name="edt1_insert_manager_phone">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_below">@+id/title</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:hint">Mã id điện thoại</item>
+    </style>
+
+    <style name="edt2_insert_manager_phone">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_below">@+id/edit_idPhone</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:hint">Giá tiền</item>
+    </style>
+
+    <style name="edt3_insert_manager_phone">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_below">@+id/edit_price</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:hint">Link ảnh</item>
+    </style>
+
+    <style name="edt4_insert_manager_phone">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_below">@+id/edit_image</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:hint">Tên điện thoại</item>
+    </style>
+
+    <style name="edt5_insert_manager_phone">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_below">@+id/edit_phoneName</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:hint">Tên hãng sản xuất</item>
+    </style>
+
+    <style name="bnt_insert_manager_phone">
+        <item name="android:layout_below">@+id/edit_producer</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:text">thêm</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:background">@color/colorBlue</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    //dialog_manager_user
+
+    <style name="Rlt_dialog_manager_user">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">10dp</item>
+    </style>
+
+    <style name="tv_dialog_manager_user">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:text">Cập nhật người dùng</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="edt1_dialog_manager_user">
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_below">@+id/updateUsers</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:hint">Tên người dùng</item>
+    </style>
+
+    <style name="edt2_dialog_manager_user">
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_below">@+id/edit_fullname</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:hint">Số điện thoại</item>
+    </style>
+
+    <style name="spinner_dialog_manager_user">
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_below">@+id/edit_idPhone</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+    </style>
+
+    <style name="btn_dialog_manager_user">
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_below">@+id/spinner_role</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:text">Cập nhật</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:background">@color/colorBlue</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+    //dialog_order
+
+    <style name="Rlt_dialog_order">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="img_dialog_order">
+        <item name="android:layout_width">150dp</item>
+        <item name="android:layout_height">180dp</item>
+        <item name="android:layout_alignParentStart">true</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:layout_marginTop">20dp</item>
+    </style>
+
+    <style name="tv_dialog_order">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/regular</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:text">Phone</item>
+        <item name="android:layout_toRightOf">@+id/image_phone</item>
+        <item name="android:layout_marginTop">30dp</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:layout_marginLeft">20dp</item>
+
+    </style>
+
+    <style name="tv2_dialog_order">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:text">Giá tiền</item>
+        <item name="android:layout_toRightOf">@+id/image_phone</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_below">@+id/edit_idPhone</item>
+        <item name="android:layout_marginLeft">20dp</item>
+
+    </style>
+
+    <style name="btn_dialog_order">
+        <item name="android:layout_width">30dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:background">@drawable/ic_baseline_add_box_24</item>
+        <item name="android:layout_toRightOf">@+id/image_phone</item>
+        <item name="android:layout_marginTop">30dp</item>
+        <item name="android:layout_below">@+id/pricePhone</item>
+        <item name="android:layout_marginLeft">30dp</item>
+    </style>
+
+    <style name="tv3_dialog_order">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:layout_toRightOf">@id/buttonPlus</item>
+        <item name="android:layout_marginTop">35dp</item>
+        <item name="android:layout_below">@+id/pricePhone</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:text">1</item>
+    </style>
+
+    <style name="btn2_dialog_order">
+        <item name="android:layout_width">30dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:background">@drawable/ic_baseline_indeterminate_check_box_24</item>
+        <item name="android:layout_toRightOf">@id/text_amount</item>
+        <item name="android:layout_marginTop">30dp</item>
+        <item name="android:layout_below">@+id/pricePhone</item>
+        <item name="android:layout_marginLeft">5dp</item>
+    </style>
+
+    <style name="btn3_dialog_order">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_below">@+id/image_phone</item>
+        <item name="android:background">@color/colorBlue</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:text">Đặt hàng</item>
+    </style>
+
+    //dialog_phone
+
+    <style name="Rlt_dialog_phone">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">10dp</item>
+    </style>
+
+
+    <style name="edt1_dialog_phone">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:hint">Tên điện thoại</item>
+    </style>
+
+    <style name="edt2_dialog_phone">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:layout_below">@+id/edit_idPhone</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:hint">Giá tiền</item>
+    </style>
+
+    <style name="edt3_dialog_phone">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:layout_below">@+id/edit_price</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:hint">Tên hãng</item>
+    </style>
+
+    <style name="edt4_dialog_phone">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:layout_below">@+id/edit_producer</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:hint">link hình ảnh</item>
+    </style>
+
+    <style name="btn_dialog_phone">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:layout_below">@+id/imagePhone</item>
+        <item name="android:background">@color/colorBlue</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:text">Thêm</item>
+    </style>
+
+    //dialog_update_feedback
+
+    <style name="Rlt_dialog_update_feedback">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">10dp</item>
+    </style>
+
+    <style name="edt1_dialog_update_feedback">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:hint">Lý do</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:layout_marginTop">10dp</item>
+    </style>
+
+    <style name="edt2_dialog_update_feedback">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:hint">Miêu tả</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:layout_below">@+id/edit_price</item>
+        <item name="android:layout_marginTop">10dp</item>
+    </style>
+
+    <style name="edt3_dialog_update_feedback">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:hint">Mã id người gửi</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:layout_below">@+id/edit_producer</item>
+        <item name="android:layout_marginTop">10dp</item>
+    </style>
+
+    <style name="btn_dialog_update_feedback">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:layout_below">@+id/edit_phoneName</item>
+        <item name="android:background">@color/colorBlue</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:text">Thêm</item>
+    </style>
+
+    //dialog_update_phone
+
+    <style name="Rlt_dialog_update_phone">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">10dp</item>
+    </style>
+
+    <style name="tv_dialog_update_phone">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:text">Cập nhật điện thoại</item>
+    </style>
+
+
+    <style name="edt1_dialog_update_phone">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:hint">Tên điện thoại</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:layout_below">@+id/title</item>
+        <item name="android:layout_marginTop">10dp</item>
+    </style>
+
+    <style name="edt2_dialog_update_phone">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:hint">Giá tiền</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:layout_below">@+id/edit_idPhone</item>
+        <item name="android:layout_marginTop">10dp</item>
+    </style>
+
+    <style name="edt3_dialog_update_phone">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:hint">Tên hãng</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:layout_below">@+id/edit_price</item>
+        <item name="android:layout_marginTop">10dp</item>
+    </style>
+
+    <style name="edt4_dialog_update_phone">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:hint">link hình ảnh</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:layout_below">@+id/edit_producer</item>
+        <item name="android:layout_marginTop">10dp</item>
+    </style>
+
+    <style name="btn_dialog_update_phone">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:layout_below">@+id/imagePhone</item>
+        <item name="android:background">@color/colorBlue</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:text">Thêm</item>
+    </style>
+
+    //fragment_cart
+
+    <style name="Rlt_fragment_cart">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="toolbar_fragment_cart">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:background">@color/colorBlue</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:theme">?attr/actionBarTheme</item>
+
+    </style>
+
+    <style name="btn1_fragment_cart">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:text">Xóa</item>
+        <item name="android:background">@color/colorWhite</item>
+        <item name="android:layout_marginLeft">300dp</item>
+
+    </style>
+
+
+    <style name="Rcv_fragment_cart">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_below">@id/toolbar_carts</item>
+        <item name="android:layout_above">@id/relative</item>
+
+    </style>
+
+    <style name="Rlt2_fragment_cart">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:layout_alignParentBottom">true</item>
+    </style>
+
+    <style name="chk_fragment_cart">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:layout_alignParentStart">true</item>
+        <item name="android:text">Tất cả</item>
+    </style>
+
+    <style name="tv_fragment_cart">
+        <item name="android:layout_width">180dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginStart">25dp</item>
+        <item name="android:layout_marginTop">31dp</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:layout_toEndOf">@+id/checkbox</item>
+        <item name="android:text">Tổng cộng : 0 vnd</item>
+    </style>
+
+    <style name="btn2_fragment_cart">
+        <item name="android:layout_width">120dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:background">@color/colorBlue</item>
+        <item name="android:text">Thanh toán</item>
+    </style>
+
+    //fragment_chats
+
+    <style name="Rcv_fragment_chats">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    //fragment_home
+
+    <style name="Ln_fragment_home">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="toolbar_fragment_home">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">#FFFFFF</item>
+    </style>
+
+    <style name="Ln_toolbar_fragment_home">
+        <item name="android:layout_width">390dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:padding">3dp</item>
+        <item name="android:background">@drawable/background_toolbar</item>
+    </style>
+
+    <style name="edt_fragment_home">
+        <item name="android:layout_width">320dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="img_fragment_home">
+        <item name="android:layout_width">35dp</item>
+        <item name="android:layout_height">35dp</item>
+        <item name="android:src">@drawable/ic_search</item>
+    </style>
+
+    <style name="scroll_fragment_home">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="Rlt_fragment_home">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="slider_fragment_home">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">230dp</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_marginTop">0dp</item>
+
+    </style>
+
+    <style name="tv_fragment_home">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_below">@+id/image_slider</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:text">Danh sách sản phẩm</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">25sp</item>
+
+    </style>
+
+    <style name="Rcv_fragment_home">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_below">@+id/text_title</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:layout_margin">10dp</item>
+    </style>
+
+    //fragment_message
+
+    <style name="Rlt_fragment_message">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="tablayout_fragment_message">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/background_toolbar</item>
+        <item name="android:layout_alignParentTop">true</item>
+    </style>
+
+    <style name="viewpage_fragment_message">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_below">@+id/tablayout_message</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+    //fragment_profile_admin
+
+    <style name="Nv_fragment_profile_admin">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    //fragment_profile_user
+
+    <style name="Nv_fragment_profile_user">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    //fragment_statistical
+
+    <style name="tv_fragment_statistical">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:text">@string/hello_blank_fragment</item>
+    </style>
+
+    //fragment_users
+
+    <style name="Rcv_fragment_users">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    //manager_feedback_item
+
+    <style name="Rlt_manager_feedback_item">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">10dp</item>
+    </style>
+
+    <style name="img_manager_feedback_item">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">100dp</item>
+    </style>
+
+    <style name="tv1_manager_feedback_item">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_toRightOf">@+id/image_feedback</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:text">Tên người gửi</item>
+    </style>
+
+    <style name="tv2_manager_feedback_item">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_toRightOf">@+id/image_feedback</item>
+        <item name="android:layout_below">@+id/edit_phoneName</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:text">Lý do</item>
+    </style>
+
+    <style name="tv3_manager_feedback_item">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_toRightOf">@+id/image_feedback</item>
+        <item name="android:layout_below">@+id/reason</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:text">Miêu tả</item>
+    </style>
+
+    <style name="img2_manager_feedback_item">
+        <item name="android:layout_width">60dp</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:src">@drawable/ic_baseline_delete_forever_24</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    //manager_phone_item
+
+    <style name="Rlt_manager_phone_item">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="img_manager_phone_item">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">120dp</item>
+        <item name="android:layout_margin">10dp</item>
+    </style>
+
+    <style name="tv1_manager_phone_item">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">18dp</item>
+        <item name="android:layout_toRightOf">@+id/image_managerPhone</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:text">ten dien thoai</item>
+
+    </style>
+
+    <style name="tv2_manager_phone_item">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_toRightOf">@+id/image_managerPhone</item>
+        <item name="android:layout_below">@+id/edit_idPhone</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:text">gia tien</item>
+
+    </style>
+
+    <style name="tv3_manager_phone_item">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_toRightOf">@+id/image_managerPhone</item>
+        <item name="android:layout_below">@+id/pricePhone</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:text">Miêu tả</item>
+
+
+    </style>
+
+    <style name="img2_manager_phone_item">
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:src">@drawable/ic_baseline_delete_forever_24</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginTop">23dp</item>
+        <item name="android:layout_marginRight">24dp</item>
+    </style>
+
+    //manager_user_item
+
+    <style name="Rlt_manager_user_item">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="img_manager_user_item">
+        <item name="android:layout_width">90dp</item>
+        <item name="android:layout_height">90dp</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:src">@mipmap/ic_launcher</item>
+
+    </style>
+
+    <style name="tv1_manager_user_item">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_toRightOf">@+id/image_managerUser</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:text">ten nguoi dung</item>
+    </style>
+
+    <style name="tv2_manager_user_item">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_below">@+id/nameUser</item>
+        <item name="android:layout_toRightOf">@+id/image_managerUser</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:text">Vai trò</item>
+
+    </style>
+
+    <style name="tv3_manager_user_item">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_below">@+id/Role</item>
+        <item name="android:layout_toRightOf">@+id/image_managerUser</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:text">Số điện thoại</item>
+    </style>
+
+    //nav_header
+
+    <style name="img_nav_header">
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:src">@mipmap/ic_launcher_round</item>
+    </style>
+
+    <style name="tv1_nav_header">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">13dp</item>
+        <item name="android:layout_below">@+id/text_fullname</item>
+        <item name="android:layout_toRightOf">@+id/image_user</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:text">your email</item>
+    </style>
+
+    <style name="tv2_nav_header">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">13dp</item>
+        <item name="android:layout_marginTop">34dp</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_toRightOf">@+id/image_user</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:text">Họ tên</item>
+    </style>
+
+    //phone_item
+
+    <style name="Rlt_phone_item">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="img_phone_item">
+        <item name="android:layout_width">120dp</item>
+        <item name="android:layout_height">140dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+    <style name="tv1_phone_item">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_below">@+id/image_dienthoai</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:fontFamily">@font/regular</item>
+        <item name="android:text">Tên</item>
+    </style>
+
+
+    <style name="tv2_phone_item">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_below">@+id/text_tendienthoai</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:text">giá tiền</item>
+    </style>
+
+    //transactionhistory
+
+    <style name="tv1_transactionhistory">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:text">Ngày mua</item>
+        <item name="android:layout_margin">10dp</item>
+    </style>
+
+    <style name="tv2_transactionhistory">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:text">Tổng tiền</item>
+        <item name="android:layout_margin">10dp</item>
+    </style>
+
+    //user_item
+
+    <style name="img_user_item">
+        <item name="android:layout_width">96dp</item>
+        <item name="android:layout_height">91dp</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+    </style>
+
+    <style name="tv1_user_item">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">24dp</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:text">@string/ho_va_ten</item>
+    </style>
+
+
+    <style name="img2_user_item">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">90dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+    </style>
+
+    <style name="img3_user_item">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">90dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:contentDescription">TODO</item>
+    </style>
+
+    <style name="tv2_user_item">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+        <item name="android:text">@string/so_dien_thoai</item>
+    </style>
 
 </resources>

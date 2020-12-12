@@ -19,9 +19,12 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 
 public class StatisticalActivity extends AppCompatActivity {
     private static final String TAG = "StatisticalActivity";
@@ -125,10 +128,13 @@ public class StatisticalActivity extends AppCompatActivity {
                             e.printStackTrace();
                         }
                     }
-
-                    txtToday.setText("Hôm nay : "+TOTAL_TODAY);
-                    txtMonth.setText("Tháng này : "+TOTAL_MONTH);
-                    txtYear.setText("Năm này : "+TOTAL_YEAR);
+                    DecimalFormat nf = (DecimalFormat) DecimalFormat.getCurrencyInstance(Locale.FRANCE);
+                    DecimalFormatSymbols formatSymbols = new DecimalFormatSymbols();
+                    formatSymbols.setCurrencySymbol("vnd");
+                    nf.setDecimalFormatSymbols(formatSymbols);
+                    txtToday.setText("Hôm nay : "+nf.format(TOTAL_TODAY));
+                    txtMonth.setText("Tháng này : "+nf.format(TOTAL_MONTH));
+                    txtYear.setText("Năm này : "+nf.format(TOTAL_YEAR));
                 }
 
             }

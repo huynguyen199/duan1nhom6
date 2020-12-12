@@ -1,10 +1,12 @@
 package com.example.duan1_nhom6.Fragment;
 
+import android.app.NotificationManager;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -16,6 +18,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.duan1_nhom6.Adapter.CartsAdapter;
 import com.example.duan1_nhom6.BuildConfig;
@@ -73,6 +76,7 @@ public class CartFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         Log.i("Main", "onCreateView()");
 
         // Inflate the layout for this fragment
@@ -94,14 +98,10 @@ public class CartFragment extends Fragment {
         firebaseCart = FirebaseDatabase.getInstance().getReference("Cart");
         firebasePhone = FirebaseDatabase.getInstance().getReference("Phone");
 
+        handLingPay();
 
 
-        btnPay.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                  handLingPay();
-            }
-        });
+
 
 
                 firebaseCart.child(firebaseUser.getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
@@ -154,10 +154,19 @@ public class CartFragment extends Fragment {
                                         formatSymbols.setCurrencySymbol("vnd");
                                         nf.setDecimalFormatSymbols(formatSymbols);
                                         texttotal.setText("Tổng cộng: "+nf.format(TOTAL));
-                                        Date now = new Date();
-                                        String date = sdf.format(now.getTime());
-                                        TrasHistory trasHistory = new TrasHistory(date,firebaseUser.getUid(),TOTAL);
-                                        databaseTrasHistory.push().setValue(trasHistory.toMap());
+
+                                    btnPay.setOnClickListener(new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View v) {
+                                            Date now = new Date();
+                                            String date = sdf.format(now.getTime());
+                                            TrasHistory trasHistory = new TrasHistory(date,firebaseUser.getUid(),TOTAL);
+                                            databaseTrasHistory.push().setValue(trasHistory.toMap());
+                                            firebaseCart.child(firebaseUser.getUid()).removeValue();
+                                            notifyData();
+                                            Toast.makeText(getContext(), "Thanh toán thành công vui lòng xem lịch sử giao dịch của bạn", Toast.LENGTH_SHORT).show();
+                                        }
+                                    });
                                 }
                             }
 
@@ -175,6 +184,14 @@ public class CartFragment extends Fragment {
 
             }
         });
+    }
+    public void notifyData(){
+
+        getActivity().getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.fragment_container, new CartFragment())
+                .commit();
+
     }
 
     public void listPhone(){

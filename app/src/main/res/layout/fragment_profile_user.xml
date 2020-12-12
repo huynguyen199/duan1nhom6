@@ -8,12 +8,11 @@
 
         <com.google.android.material.navigation.NavigationView
             android:id="@+id/navigation_options"
-            android:layout_width="match_parent"
+            style="@style/Nv_fragment_profile_user"
             app:menu="@menu/menu_profile_user"
             app:itemTextAppearanceActive="@style/Widget.NavigationView"
             app:itemTextAppearanceInactive="@style/Widget.NavigationView"
             app:headerLayout="@layout/nav_header"
-            android:layout_height="match_parent"
             />
 
 

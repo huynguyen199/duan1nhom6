@@ -173,7 +173,6 @@ public class CartsAdapter extends RecyclerView.Adapter<CartsAdapter.CardsHolder>
                                 public void onClick(View v) {
                                     int total = carts1.getAmount() + 1;
 
-                                    if(total>0)
                                     firebaseCart.child(firebaseUser.getUid())
                                             .child(carts.getId_phone())
                                             .child("amount").setValue(total);
@@ -187,13 +186,15 @@ public class CartsAdapter extends RecyclerView.Adapter<CartsAdapter.CardsHolder>
                             holder.minusBtn.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View v) {
-                                    int total = carts1.getAmount() - 1;
-                                    firebaseCart.child(firebaseUser.getUid())
-                                            .child(carts.getId_phone())
-                                            .child("amount").setValue(total);
-                                    carts.setAmount(total);
+                                    if(carts1.getAmount() > 0) {
+                                        int total = carts1.getAmount() - 1;
+                                            firebaseCart.child(firebaseUser.getUid())
+                                                    .child(carts.getId_phone())
+                                                    .child("amount").setValue(total);
+                                        carts.setAmount(total);
 
-                                    notifyDataSetChanged();
+                                        notifyDataSetChanged();
+                                    }
 
                                 }
                             });

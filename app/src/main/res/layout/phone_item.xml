@@ -8,35 +8,19 @@
     android:layout_margin="10dp"
     >
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        style="@style/Rlt_phone_item"
         >
 
         <ImageView
             android:id="@+id/image_dienthoai"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="10dp"
-            android:layout_width="120dp"
-            android:layout_height="140dp" />
+           style="@style/img_phone_item" />
         <TextView
             android:id="@+id/text_tendienthoai"
-            android:text="ten"
-            android:fontFamily="@font/regular"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/image_dienthoai"
-            android:layout_width="wrap_content"
-            android:textColor="@color/colorBlack"
-            android:textStyle="bold"
-            android:layout_height="wrap_content"
+            style="@style/tv1_phone_item"
             />
         <TextView
             android:id="@+id/text_giatien"
-            android:layout_width="wrap_content"
-            android:fontFamily="@font/dosis_bold"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/text_tendienthoai"
-            android:layout_centerHorizontal="true"
-            android:text="gia tien"
+            style="@style/tv2_phone_item"
             />
     </RelativeLayout>
 

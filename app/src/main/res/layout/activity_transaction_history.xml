@@ -8,27 +8,15 @@
 
     <Toolbar
         android:id="@+id/toolbar_transaction_history"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorBlue"
-        android:layout_alignParentTop="true"
+        style="@style/toolbar_transaction_history"
         />
     <TextView
         android:id="@+id/text_title"
-        android:layout_width="wrap_content"
-        android:text="Lịch sử giao dịch"
-        android:textSize="30dp"
-        android:fontFamily="@font/dosis_bold"
-        android:textColor="@color/colorBlack"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/toolbar_transaction_history"
+        style="@style/tv_trasaction_history"
         />
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview_manager_phone"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/text_title"
+        style="@style/Rcv_trasaction_history"
         />
 
 </RelativeLayout>

@@ -54,8 +54,10 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
+import java.lang.reflect.Array;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.Arrays;
 import java.util.Date;
 
 
@@ -221,11 +223,12 @@ public class LoginActivity extends AppCompatActivity {
         FacebookSdk.sdkInitialize(getApplicationContext());
         AppEventsLogger.activateApp(this);
 
-        mCallbackManager = CallbackManager.Factory.create();
 
         loginfb = findViewById(R.id.login_button);
 //        loginfb.setReadPermissions("email", "public_profile");
-        loginfb.setReadPermissions("email", "public_profile");
+        loginfb.setReadPermissions(Arrays.asList( "public_profile","email"));
+
+        mCallbackManager = CallbackManager.Factory.create();
         loginfb.registerCallback(mCallbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {

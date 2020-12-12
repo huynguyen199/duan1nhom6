@@ -8,133 +8,48 @@
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        style="@style/abc"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-
-        android:background="@color/colorBlue"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
+        style="@style/toolbar_register"
 
         />
 
     <View
-        android:layout_below="@id/toolbar"
         android:id="@+id/topView"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:background="@color/colorBlue"
+        style="@style/view1_register"
         />
 
     <View
         android:id="@+id/view5"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_below="@id/topView"
-        android:layout_marginTop="-1dp"
-        android:background="@drawable/wave" />
+        style="@style/view2_register" />
 
     <TextView
         android:id="@+id/topText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:fontFamily="@font/regular"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="85dp"
-        android:text="Đăng kí"
-        android:textColor="@android:color/black"
-        android:textSize="60sp"
+        style="@style/tv_register"
         />
 
-
+.
     <EditText
         android:id="@+id/edUserHoTen"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/view5"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="-2dp"
-        android:layout_marginEnd="32dp"
-        android:background="@drawable/round_border"
-        android:drawableStart="@drawable/ic_email"
-        android:drawablePadding="16dp"
-        android:hint="@string/hoten"
-        android:padding="16dp" />
+        style="@style/edt1_register"/>
 
     <EditText
-        android:layout_below="@id/edSdt"
-        android:padding="16dp"
-        android:layout_marginTop="10dp"
         android:id="@+id/edEmail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/round_border"
-        android:hint="@string/email"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:drawablePadding="16dp"
-        android:drawableStart="@drawable/ic_lock"
+        style="@style/edt3_register"
         />
     <EditText
-        android:layout_below="@+id/edUserHoTen"
-        android:padding="16dp"
-        android:layout_marginTop="10dp"
         android:id="@+id/edSdt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/round_border"
-        android:hint="@string/sdt"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:drawablePadding="16dp"
-        android:drawableStart="@drawable/ic_lock"
+       style="@style/edt2_register"
         />
     <EditText
-        android:layout_below="@+id/edEmail"
-        android:padding="16dp"
         android:id="@+id/edMk"
-        android:layout_marginTop="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/round_border"
-        android:hint="@string/mk"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:drawablePadding="16dp"
-        android:drawableStart="@drawable/ic_lock"
+        style="@style/edt4_register"
         />
     <EditText
-        android:layout_below="@+id/edMk"
-        android:padding="16dp"
         android:id="@+id/ednhaplai"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/round_border"
-        android:layout_marginTop="10dp"
-        android:hint="@string/nhaplai"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:drawablePadding="16dp"
-        android:drawableStart="@drawable/ic_lock"
+        style="@style/edt5_register"
         />
     <Button
-        android:padding="8dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="32dp"
         android:id="@+id/btnregister"
-        android:layout_below="@id/ednhaplai"
-        android:background="@drawable/round_bg"
-        android:layout_width="match_parent"
-        android:textStyle="bold"
-        android:layout_height="wrap_content"
-        android:text="Đăng kí"
-        android:layout_marginRight="32dp"
-
+        style="@style/btn_register"
         />
 
 

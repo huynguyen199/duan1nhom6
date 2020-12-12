@@ -4,56 +4,28 @@
     android:layout_height="wrap_content"
     >
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        style="@style/Rlt_manager_feedback_item"
         >
         <ImageView
             android:id="@+id/image_feedback"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            style="@style/img_manager_feedback_item"
             />
         <TextView
             android:id="@+id/edit_phoneName"
-            android:layout_marginLeft="10dp"
-            android:layout_toRightOf="@+id/image_feedback"
-            android:layout_width="wrap_content"
-            android:fontFamily="@font/dosis_bold"
-            android:textColor="@color/colorBlack"
-            android:layout_height="wrap_content"
-            android:text="Tên người gửi"
-
+            style="@style/tv1_manager_feedback_item"
             />
         <TextView
             android:id="@+id/reason"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/dosis_bold"
-            android:layout_below="@+id/edit_phoneName"
-            android:layout_toRightOf="@+id/image_feedback"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Lý do"
+            style="@style/tv2_manager_feedback_item"
             />
 
         <TextView
             android:id="@+id/describe"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/dosis_bold"
-            android:layout_below="@+id/reason"
-            android:layout_toRightOf="@+id/image_feedback"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Miêu tả"
+            style="@style/tv3_manager_feedback_item"
             />
         <ImageView
             android:id="@+id/imageDel"
-            android:layout_width="60dp"
-            android:layout_alignParentRight="true"
-            android:layout_height="60dp"
-            android:src="@drawable/ic_baseline_delete_forever_24"
-            android:layout_centerVertical="true"
+            style="@style/img2_manager_feedback_item"
             />
 
     </RelativeLayout>

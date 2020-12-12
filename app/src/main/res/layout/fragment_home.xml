@@ -7,44 +7,26 @@
     tools:context=".Fragment.HomeFragment">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
+        style="@style/Ln_fragment_home"
         >
     <Toolbar
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#FFFFFF"
+        style="@style/toolbar_fragment_home"
         >
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:padding="3dp"
-            android:layout_margin="10dp"
-            android:background="@drawable/background_toolbar"
+            style="@style/Ln_toolbar_fragment_home"
             >
             <EditText
                 android:id="@+id/edit_search"
-                android:layout_width="match_parent"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="5dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
+                style="@style/edt_fragment_home"
                 />
             <ImageView
-                android:layout_width="65dp"
-                android:src="@drawable/ic_search"
-                android:layout_height="35dp"
-                android:layout_weight="1"
+                style="@style/img_fragment_home"
                 />
         </LinearLayout>
     </Toolbar>
 
         <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+           style="@style/scroll_fragment_home">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -52,38 +34,23 @@
 
                 <com.denzcoskun.imageslider.ImageSlider
                     android:id="@+id/image_slider"
-                    android:layout_width="match_parent"
-                    android:layout_height="230dp"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginTop="0dp"
+                    style="@style/slider_fragment_home"
                     app:auto_cycle="true"
                     app:corner_radius="5"
                     android:layout_margin="10dp"
                     app:delay="1000"
                     app:period="1000"
-                    app:placeholder="@color/colorWhite" />
+                    app:placeholder="@color/colorWhite"
+                    />
 
                 <TextView
                     android:id="@+id/text_title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/image_slider"
-                    android:layout_marginTop="20dp"
-                    android:fontFamily="@font/dosis_bold"
-                    android:text="Danh sách sản phẩm"
-                    android:layout_margin="10dp"
-                    android:textColor="@color/colorBlack"
-                    android:textSize="25dp" />
+                    style="@style/tv_fragment_home"/>
 
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerview_phone"
-                    android:layout_width="match_parent"
-                    android:visibility="gone"
-                    android:layout_height="match_parent"
-                    android:layout_below="@+id/text_title"
-                    android:layout_margin="10dp"
-                    android:layout_marginTop="0dp" />
+                    style="@style/Rcv_fragment_home" />
 
                 <ProgressBar
                     android:id="@+id/progressBar2"

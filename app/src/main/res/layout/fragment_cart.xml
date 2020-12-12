@@ -8,74 +8,40 @@
 
     <RelativeLayout
         android:id="@+id/relative_parent"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        style="@style/Rlt_fragment_cart"
         >
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar_carts"
-            android:background="@color/colorBlue"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="0dp"
-            android:theme="?attr/actionBarTheme">
+            style="@style/toolbar_fragment_cart">
             <Button
                 android:id="@+id/btnDel"
-                android:text="xoa"
-                android:background="@color/colorWhite"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="300dp"
+                style="@style/btn1_fragment_cart"
 
                 />
         </androidx.appcompat.widget.Toolbar>
         <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:id="@+id/recyclerview_carts"
-        android:layout_height="match_parent"
-            android:layout_below="@id/toolbar_carts"
-        android:layout_above="@id/relative"
+            android:id="@+id/recyclerview_carts"
+        style="@style/Rcv_fragment_cart"
         />
 
         <RelativeLayout
             android:id="@+id/relative"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_alignParentBottom="true"
+            style="@style/Rlt2_fragment_cart"
             >
 
             <CheckBox
                 android:id="@+id/checkbox"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:fontFamily="@font/dosis_bold"
-                android:layout_alignParentStart="true"
-                android:text="Tất cả" />
+                style="@style/chk_fragment_cart"/>
 
             <TextView
                 android:id="@+id/textTotal"
-                android:layout_width="180dp"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="31dp"
-                android:fontFamily="@font/dosis_bold"
-                android:layout_toEndOf="@+id/checkbox"
-                android:text="Tổng cộng : 0 vnd"
+                style="@style/tv_fragment_cart"
                 />
 
             <Button
                 android:id="@+id/btn_thanhtoan"
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_alignParentRight="true"
-                android:text="Thanh toán"
-                android:fontFamily="@font/dosis_bold"
-                android:background="@color/colorBlue"
-                android:textColor="@color/colorWhite"
+                style="@style/btn2_fragment_cart"
                 />
         </RelativeLayout>
 

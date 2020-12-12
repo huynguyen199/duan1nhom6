@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 
 import com.example.duan1_nhom6.Fragment.CartFragment;
@@ -31,13 +32,14 @@ public class MainActivity extends AppCompatActivity {
 
     FirebaseUser firebaseUser;
     DatabaseReference databaseReference;
-    DatabaseReference myref;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
 
         FacebookSdk.sdkInitialize(getApplicationContext());
         AppEventsLogger.activateApp(this);
@@ -137,6 +139,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(i);
         }
     }
+
 
     @Override
     protected void onResume() {

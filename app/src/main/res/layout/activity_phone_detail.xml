@@ -13,247 +13,93 @@
 <!--    id image_phone là phần slider image-->
     <Toolbar
         android:id="@+id/toolbar_phone_details"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorBlue"
+        style="@style/toolbar_phone_detail"
         />
 
     <ScrollView
         android:id="@+id/scroll_phone_details"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/add_carts"
-        android:layout_below="@+id/toolbar_phone_details"
-        android:layout_marginTop="-3dp"
-        android:layout_marginBottom="3dp">
+        style="@style/scroll_phone_detail">
 
         <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+           style="@style/Rlt_phone_detail">
 
             <com.denzcoskun.imageslider.ImageSlider
                 android:id="@+id/image_phone"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:src="@mipmap/ic_launcher"
-                app:period="1000"
+                style="@style/img_phone_detail"
                 app:auto_cycle="true"
-                app:delay="1000"
                 app:corner_radius="5"
+                android:layout_margin="10dp"
+                app:delay="1000"
+                app:period="1000"
                 app:placeholder="@color/colorWhite"
                 />
 
             <TextView
                 android:id="@+id/text_title"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/image_phone"
-                android:paddingLeft="20dp"
-                android:background="@color/colorWhite"
-                android:layout_marginTop="20dp"
-                android:text="ten dien thoai"
-                android:textColor="@color/colorBlack"
-                android:textSize="25dp"
-                android:fontFamily="@font/regular"
+                style="@style/tv_phone_detail"
                 />
 
             <TextView
                 android:id="@+id/text_price"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/text_title"
-                android:paddingLeft="20dp"
-                android:text="giá điện thoại"
-                android:textSize="20dp"
-                android:background="@color/colorWhite"
-                android:textStyle="bold" />
+                style="@style/tv2_phone_detail" />
 
             <TextView
                 android:id="@+id/text_guegrantee"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/text_price"
-                android:background="@color/colorWhite"
-                android:paddingLeft="20dp"
-                android:text="Bảo hành"
-                android:textSize="20dp"
-                android:textStyle="bold" />
+                style="@style/tv3_phone_detail" />
 
             <TextView
                 android:id="@+id/text_title_introduce"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:gravity="center"
-                android:textColor="@color/colorBlack"
-
-                android:text="giới thiệu"
-                android:textStyle="bold"
-                android:layout_marginTop="20dp"
-                android:background="@color/colorWhite"
-                android:layout_below="@+id/text_guegrantee"
+                style="@style/tv4_phone_detail"
                 />
             <TextView
                 android:id="@+id/text_introduce"
-                android:fontFamily="@font/dosis_bold"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-
-                android:text="giới thiệu"
-                android:background="@color/colorWhite"
-                android:layout_below="@+id/text_title_introduce"
+                style="@style/tv5_phone_detail"
                 />
 
 
 
             <TextView
                 android:id="@+id/text_description"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/colorWhite"
-                android:gravity="center"
-                android:text="mô tả"
-                android:textColor="@color/colorBlack"
-                android:textSize="20dp"
-                android:textStyle="bold"
-                android:layout_marginTop="20dp"
-                android:layout_below="@+id/text_introduce"
+                style="@style/tv6_phone_detail"
                 />
             <TextView
                 android:id="@+id/text_manhinh"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/text_description"
-                android:text="Màn hình :"
-                android:paddingLeft="20dp"
-                android:textColor="@color/colorBlack"
-                android:fontFamily="@font/dosis_bold"
-
-                android:layout_marginTop="3dp"
-                android:background="@color/colorWhite"
+                style="@style/tv7_phone_detail"
                 />
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/colorBlack"
-                android:fontFamily="@font/dosis_bold"
-                android:layout_below="@+id/text_manhinh"
-                android:text="hệ điều hành"
-                android:paddingLeft="20dp"
-                android:layout_marginTop="3dp"
-                android:textSize="15dp"
-                android:background="@color/colorWhite"
-                />
-            <TextView
-                android:textSize="15dp"
                 android:id="@+id/text_hedieuhanh"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/colorBlack"
-                android:fontFamily="@font/dosis_bold"
-                android:layout_below="@+id/text_manhinh"
-                android:text="Hệ điều hành :"
-                android:paddingLeft="20dp"
-                android:layout_marginTop="3dp"
-                android:background="@color/colorWhite"
+                style="@style/tv8_phone_detail"
                 />
             <TextView
-                android:textSize="15dp"
                 android:id="@+id/text_camera_sau"
-                android:layout_width="match_parent"
-                android:textColor="@color/colorBlack"
-                android:fontFamily="@font/dosis_bold"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/text_hedieuhanh"
-                android:text="Camera sau :"
-                android:paddingLeft="20dp"
-                android:layout_marginTop="3dp"
-                android:background="@color/colorWhite"
+                style="@style/tv9_phone_detail"
                 />
             <TextView
-                android:textSize="15dp"
                 android:id="@+id/text_camera_truoc"
-                android:textColor="@color/colorBlack"
-                android:fontFamily="@font/dosis_bold"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/text_camera_sau"
-                android:text="Camera trước :"
-                android:paddingLeft="20dp"
-                android:layout_marginTop="3dp"
-                android:background="@color/colorWhite"
+                style="@style/tv10_phone_detail"
                 />
             <TextView
-                android:textSize="15dp"
                 android:id="@+id/text_gpu"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/colorBlack"
-                android:fontFamily="@font/dosis_bold"
-                android:layout_below="@+id/text_camera_truoc"
-                android:text="CPU :"
-                android:paddingLeft="20dp"
-                android:layout_marginTop="3dp"
-                android:background="@color/colorWhite"
+                style="@style/tv11_phone_detail"
                 />
 
             <TextView
                 android:id="@+id/text_ram"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/text_gpu"
-                android:textColor="@color/colorBlack"
-                android:fontFamily="@font/dosis_bold"
-                android:layout_marginTop="7dp"
-                android:background="@color/colorWhite"
-                android:paddingLeft="20dp"
-                android:text="Ram :"
-                android:textSize="15dp" />
+                style="@style/tv12_phone_detail" />
 
             <TextView
-                android:textSize="15dp"
                 android:id="@+id/text_bonhotrong"
-                android:textColor="@color/colorBlack"
-                android:fontFamily="@font/dosis_bold"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/text_ram"
-                android:text="Bộ nhớ trong :"
-                android:paddingLeft="20dp"
-                android:layout_marginTop="3dp"
-                android:background="@color/colorWhite"
+                style="@style/tv13_phone_detail"
                 />
             <TextView
-                android:textSize="15dp"
-                android:textColor="@color/colorBlack"
-                android:fontFamily="@font/dosis_bold"
                 android:id="@+id/text_thesim"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/text_bonhotrong"
-                android:text="Thẻ sim :"
-                android:paddingLeft="20dp"
-                android:layout_marginTop="3dp"
-                android:background="@color/colorWhite"
+                style="@style/tv14_phone_detail"
                 />
 
             <TextView
-                android:textSize="15dp"
                 android:id="@+id/text_dungluongpin"
-                android:textColor="@color/colorBlack"
-                android:fontFamily="@font/dosis_bold"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/text_thesim"
-                android:text="Dung lượng pin :"
-                android:paddingLeft="20dp"
-                android:layout_marginTop="3dp"
-                android:background="@color/colorWhite"
+                style="@style/tv15_phone_detail"
                 />
-
-
-
 
 
         </RelativeLayout>
@@ -263,14 +109,7 @@
 
     <Button
         android:id="@+id/add_carts"
-        android:text="@string/addCarts"
-        android:textColor="@color/colorWhite"
-        android:background="@color/colorBlue"
-        android:layout_width="match_parent"
-        android:fontFamily="@font/dosis_bold"
-        android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:layout_alignParentBottom="true"
+        style="@style/btn_phone_detail"
         />
 
 </RelativeLayout>

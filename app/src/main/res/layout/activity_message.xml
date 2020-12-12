@@ -7,60 +7,32 @@
 
     <Toolbar
         android:id="@id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/background_toolbar"
+        style="@style/toolbar_message"
         >
         <TextView
-            android:fontFamily="@font/dosis_bold"
-            android:textColor="@color/colorBlack"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Toolbar Title"
-            android:layout_gravity="center"
+            style="@style/tv_message"
             android:id="@+id/toolbar_title"
             />
         <ImageView
             android:id="@+id/image_online"
-            android:layout_width="10dp"
-            android:layout_height="10dp"
-            android:layout_gravity="center"
-            android:background="@drawable/background_right"
-            android:layout_marginLeft="20dp"
+            style="@style/img_message"
             />
     </Toolbar>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview_message"
-        android:layout_below="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/relative_bottom"
+        style="@style/Rcv_message"
         />
     <RelativeLayout
         android:id="@+id/relative_bottom"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="@drawable/background_editext_message"
-        android:layout_alignParentBottom="true"
+        style="@style/Rlt_message"
         >
 
         <EditText
             android:id="@+id/edit_message"
-            android:layout_width="350dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="22dp"
-            android:layout_marginTop="12dp"
-            android:hint="nhập văn bản"
-            android:background="@android:color/transparent" />
+            style="@style/edt_message" />
         <ImageButton
             android:id="@+id/btn_send"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:background="@drawable/ic_baseline_send_24"
-            android:layout_toRightOf="@+id/edit_message"
-            android:layout_centerVertical="true"
+            style="@style/btn_message"
             />
     </RelativeLayout>
 
