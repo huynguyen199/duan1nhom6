@@ -226,9 +226,11 @@ public class LoginActivity extends AppCompatActivity {
 
         loginfb = findViewById(R.id.login_button);
 //        loginfb.setReadPermissions("email", "public_profile");
-        loginfb.setReadPermissions(Arrays.asList( "public_profile","email"));
+        loginfb.setReadPermissions("email", "public_profile");
 
         mCallbackManager = CallbackManager.Factory.create();
+
+
         loginfb.registerCallback(mCallbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
@@ -341,6 +343,7 @@ public class LoginActivity extends AppCompatActivity {
 
         if(user != null){
             Intent i = new Intent(LoginActivity.this,RegisterProfileActivity.class);
+            Log.d(TAG, "updateUI: "+user.getEmail());
 //            i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(i);
 

@@ -1,6 +1,7 @@
 package com.example.duan1_nhom6.Fragment;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -27,6 +28,7 @@ import com.facebook.login.LoginManager;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserInfo;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -83,14 +85,16 @@ public class ProfileFragment extends Fragment {
                             i = new Intent(getContext(), ChangePasswordActivity.class);
                             break;
                         case R.id.nav_logout:
+
                             firebaseUser.child(Uid).child("status").setValue("offline");
                             LoginManager.getInstance().logOut();
                             FirebaseAuth.getInstance().signOut();
-                            i = new Intent(getActivity(),LoginActivity.class);
+                            i = new Intent(getContext(),LoginActivity.class);
 
                             break;
                     }
                     if(i!=null){
+                        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         getContext().startActivity(i);
                         getActivity().overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
                     }
@@ -99,6 +103,8 @@ public class ProfileFragment extends Fragment {
             }
         });
     }
+
+
 
 
     public void getProfile(){
@@ -115,14 +121,26 @@ public class ProfileFragment extends Fragment {
                     }
                     if(user!=null){
                         try {
-                            fullname.setText(user.getFullname());
                             FirebaseUser mUser = FirebaseAuth.getInstance().getCurrentUser();
-                            if (BuildConfig.DEBUG) Log.d("ProfileFragment", "mUser:" + mUser.getEmail());
-                            if(mUser.getEmail()!=null) {
-                                Email.setText(mUser.getEmail());
-                            }else{
-                                Email.setText(mUser.getPhoneNumber());
+                            fullname.setText(user.getFullname());
+
+                            if (user != null) {
+                                for (UserInfo profile : mUser.getProviderData()) {
+                                    // Id of the provider (ex: google.com)
+
+                                    String providerId = profile.getProviderId();
+
+                                    // UID specific to the provider
+                                    String uid = profile.getUid();
+
+                                    // Name, email address, and profile photo Url
+                                    String name = profile.getDisplayName();
+                                    String email = profile.getEmail();
+                                    Email.setText(email);
+
+                                }
                             }
+
 
 
                         }catch (Exception e){

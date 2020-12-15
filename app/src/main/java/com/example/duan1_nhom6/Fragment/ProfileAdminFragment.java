@@ -28,6 +28,8 @@ import com.example.duan1_nhom6.TransactionHistoryActivity;
 import com.facebook.login.LoginManager;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserInfo;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -95,9 +97,8 @@ public class ProfileAdminFragment extends Fragment {
                         firebaseUser.child(Uid).child("status").setValue("offline");
                         LoginManager.getInstance().logOut();
                         FirebaseAuth.getInstance().signOut();
+                        i = new Intent(getContext(),LoginActivity.class);
 
-                        i = new Intent(getContext(), LoginActivity.class);
-                        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 
                         break;
                 }
@@ -123,13 +124,24 @@ public class ProfileAdminFragment extends Fragment {
                         }else {
                             Picasso.get().load(user.getImageURL()).into(imageUser);
                         }
-                        if(user!=null){
-                            try {
-                                fullname.setText(user.getFullname());
+                        if(user!=null) {
 
-                                Email.setText(FirebaseAuth.getInstance().getCurrentUser().getEmail());
-                            }catch (Exception e){
+                            FirebaseUser mUser = FirebaseAuth.getInstance().getCurrentUser();
+                            if (mUser != null) {
+                                for (UserInfo profile : mUser.getProviderData()) {
+                                    // Id of the provider (ex: google.com)
 
+                                    String providerId = profile.getProviderId();
+
+                                    // UID specific to the provider
+                                    String uid = profile.getUid();
+
+                                    // Name, email address, and profile photo Url
+                                    String name = profile.getDisplayName();
+                                    String email = profile.getEmail();
+                                    Email.setText(email);
+                                    fullname.setText(name);
+                                }
                             }
                         }
                     }

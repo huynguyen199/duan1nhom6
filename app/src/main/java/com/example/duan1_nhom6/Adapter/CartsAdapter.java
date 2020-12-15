@@ -186,7 +186,7 @@ public class CartsAdapter extends RecyclerView.Adapter<CartsAdapter.CardsHolder>
                             holder.minusBtn.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View v) {
-                                    if(carts1.getAmount() > 0) {
+                                    if(carts1.getAmount() > 1) {
                                         int total = carts1.getAmount() - 1;
                                             firebaseCart.child(firebaseUser.getUid())
                                                     .child(carts.getId_phone())
