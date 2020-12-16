@@ -135,10 +135,11 @@ public class CartFragment extends Fragment {
 
 
 
-        firebaseCart.child(firebaseUser.getUid()).addValueEventListener(new ValueEventListener() {
+        /*firebaseCart.child(firebaseUser.getUid()).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 TOTAL = 0;
+
                 if(snapshot.exists()){
                     for(DataSnapshot dataSnapshot:snapshot.getChildren()){
                         final Carts carts1 = dataSnapshot.getValue(Carts.class);
@@ -146,13 +147,16 @@ public class CartFragment extends Fragment {
                         firebasePhone.child(carts1.getId_phone()).addValueEventListener(new ValueEventListener() {
                             @Override
                             public void onDataChange(@NonNull DataSnapshot snapshot) {
+
                                 if(snapshot.exists()) {
                                         Phone phone = snapshot.getValue(Phone.class);
                                         TOTAL += phone.getGiatien()*carts1.getAmount();
+
                                         DecimalFormat nf = (DecimalFormat) DecimalFormat.getCurrencyInstance(Locale.FRANCE);
                                         DecimalFormatSymbols formatSymbols = new DecimalFormatSymbols();
                                         formatSymbols.setCurrencySymbol("vnd");
                                         nf.setDecimalFormatSymbols(formatSymbols);
+                                        if (BuildConfig.DEBUG) Log.d("CartFragment", "TOTAL:" + TOTAL);
                                         texttotal.setText("Tổng cộng: "+nf.format(TOTAL));
 
                                     btnPay.setOnClickListener(new View.OnClickListener() {
@@ -183,7 +187,9 @@ public class CartFragment extends Fragment {
             public void onCancelled(@NonNull DatabaseError error) {
 
             }
-        });
+        });*/
+
+
     }
     public void notifyData(){
 
@@ -195,6 +201,7 @@ public class CartFragment extends Fragment {
     }
 
     public void listPhone(){
+        TOTAL = 0;
         listPhone = new ArrayList<>();
         firebasePhone.addValueEventListener(new ValueEventListener() {
             @Override
@@ -213,6 +220,32 @@ public class CartFragment extends Fragment {
                         }
 
                     }
+                }
+                for(Phone phone : listPhone){
+                    for (Carts carts : listCart) {
+                        if(phone.getId().equals(carts.getId_phone())) {
+                            TOTAL += phone.getGiatien() * carts.getAmount();
+                        }
+                    }
+
+                    DecimalFormat nf = (DecimalFormat) DecimalFormat.getCurrencyInstance(Locale.FRANCE);
+                    DecimalFormatSymbols formatSymbols = new DecimalFormatSymbols();
+                    formatSymbols.setCurrencySymbol("vnd");
+                    nf.setDecimalFormatSymbols(formatSymbols);
+                    texttotal.setText("Tổng cộng: "+nf.format(TOTAL));
+
+                    btnPay.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Date now = new Date();
+                            String date = sdf.format(now.getTime());
+                            TrasHistory trasHistory = new TrasHistory(date,firebaseUser.getUid(),TOTAL);
+                            databaseTrasHistory.push().setValue(trasHistory.toMap());
+                            firebaseCart.child(firebaseUser.getUid()).removeValue();
+                            notifyData();
+                            Toast.makeText(getContext(), "Thanh toán thành công vui lòng xem lịch sử giao dịch của bạn", Toast.LENGTH_SHORT).show();
+                        }
+                    });
                 }
                 adapter = new CartsAdapter(getContext(), listCart,listPhone);
 

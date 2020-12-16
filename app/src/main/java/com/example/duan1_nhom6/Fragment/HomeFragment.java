@@ -42,7 +42,7 @@ public class HomeFragment extends Fragment {
 */
     private RecyclerView recyclerView;
     private PhoneAdapter adapter;
-    private DatabaseReference myref;
+
     private ArrayList<Phone> list;
     private ProgressBar progressBar;
 
@@ -79,6 +79,7 @@ public class HomeFragment extends Fragment {
                     recyclerView.setAdapter(adapter);
                     progressBar.setVisibility(View.GONE);
                     recyclerView.setVisibility(View.VISIBLE);
+                    recyclerView.setNestedScrollingEnabled(false);
                 }
             }
 

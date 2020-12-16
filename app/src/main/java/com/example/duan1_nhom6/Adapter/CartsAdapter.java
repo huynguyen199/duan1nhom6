@@ -142,15 +142,7 @@ public class CartsAdapter extends RecyclerView.Adapter<CartsAdapter.CardsHolder>
                         firebaseCart.child(firebaseUser.getUid()).child(carts1.getId_phone()).removeValue();
                     }
                 }
-
-
-                ((FragmentActivity)context).getSupportFragmentManager()
-                        .beginTransaction()
-                        .replace(R.id.fragment_container, new CartFragment())
-                        .commit();
-
-
-
+                notifyData();
 
             }
         });
@@ -177,8 +169,7 @@ public class CartsAdapter extends RecyclerView.Adapter<CartsAdapter.CardsHolder>
                                             .child(carts.getId_phone())
                                             .child("amount").setValue(total);
                                     carts.setAmount(total);
-
-                                    notifyDataSetChanged();
+                                    notifyData();
 
                                 }
                             });
@@ -192,8 +183,8 @@ public class CartsAdapter extends RecyclerView.Adapter<CartsAdapter.CardsHolder>
                                                     .child(carts.getId_phone())
                                                     .child("amount").setValue(total);
                                         carts.setAmount(total);
+                                        notifyData();
 
-                                        notifyDataSetChanged();
                                     }
 
                                 }
@@ -234,7 +225,12 @@ public class CartsAdapter extends RecyclerView.Adapter<CartsAdapter.CardsHolder>
 
     }
 
-
+    public void notifyData(){
+        ((FragmentActivity)context).getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.fragment_container, new CartFragment())
+                .commit();
+    }
     @Override
     public int getItemCount() {
         return mCards.size();

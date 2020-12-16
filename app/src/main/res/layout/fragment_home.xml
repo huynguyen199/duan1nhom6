@@ -21,11 +21,13 @@
                 />
             <ImageView
                 style="@style/img_fragment_home"
+
                 />
         </LinearLayout>
     </Toolbar>
 
         <ScrollView
+
            style="@style/scroll_fragment_home">
 
             <RelativeLayout
@@ -50,7 +52,9 @@
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerview_phone"
-                    style="@style/Rcv_fragment_home" />
+                    style="@style/Rcv_fragment_home"
+
+                    />
 
                 <ProgressBar
                     android:id="@+id/progressBar2"

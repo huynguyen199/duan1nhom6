@@ -54,4 +54,7 @@ dependencies {
     //facebook
     implementation 'com.facebook.android:facebook-android-sdk:[4,5)'
 
+
+    //image
+    implementation 'com.mikhaellopez:circularimageview:4.2.0'
 }

@@ -57,9 +57,29 @@ public class ManagerFeedbackAdapter extends RecyclerView.Adapter<ManagerFeedback
         final FeedBack feedBack = mFeedback.get(position);
         databaseFeedBack = FirebaseDatabase.getInstance().getReference("FeedBack");
         databaseUsers = FirebaseDatabase.getInstance().getReference("Users");
-        holder.reasonText.setText(feedBack.getReason());
-        holder.describeText.setText(feedBack.getDescribe());
+        holder.reasonText.setText("Lý do: " + feedBack.getReason());
+        holder.describeText.setText("Miêu tả: "+feedBack.getDescribe());
 
+        databaseUsers.child(feedBack.getSender()).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if(snapshot.exists()){
+                        User user = snapshot.getValue(User.class);
+                        if(user.getImageURL() == "default"){
+                            Picasso.get().load(R.drawable.ic_user).into(holder.image_Feedback);
+                        }else{
+                            Picasso.get().load(user.getImageURL()).into(holder.image_Feedback);
+                        }
+                        holder.senderText.setText("Người gửi: "+user.getFullname());
+
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
 
         holder.ImageDel.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -89,6 +109,7 @@ public class ManagerFeedbackAdapter extends RecyclerView.Adapter<ManagerFeedback
                 reasonET.setText(feedBack.getReason());
                 describeET.setText(feedBack.getDescribe());
                 senderET.setText(feedBack.getSender());
+
                 dialog.show();
             }
         });

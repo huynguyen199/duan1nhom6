@@ -9,6 +9,7 @@
     <Toolbar
         android:id="@+id/toolbar_transaction_history"
         style="@style/toolbar_manager_phone"
+
         />
 
     <TextView

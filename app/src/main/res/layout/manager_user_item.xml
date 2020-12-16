@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorWhite"
+    android:layout_marginTop="5dp"
     >
     <RelativeLayout
         style="@style/Rlt_manager_user_item"
         >
-        <ImageView
+        <com.mikhaellopez.circularimageview.CircularImageView
             android:id="@+id/image_managerUser"
+            app:civ_border="false"
             style="@style/img_manager_user_item"
             />
         <TextView

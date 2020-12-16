@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    >
+    android:background="@color/colorWhite"
+    android:layout_marginTop="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <RelativeLayout
         style="@style/Rlt_manager_feedback_item"
         >
-        <ImageView
+        <com.mikhaellopez.circularimageview.CircularImageView
             android:id="@+id/image_feedback"
+            app:civ_border="false"
             style="@style/img_manager_feedback_item"
             />
         <TextView

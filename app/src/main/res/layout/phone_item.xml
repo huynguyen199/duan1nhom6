@@ -13,9 +13,10 @@
 
         <ImageView
             android:id="@+id/image_dienthoai"
-           style="@style/img_phone_item" />
+            style="@style/img_phone_item" />
         <TextView
             android:id="@+id/text_tendienthoai"
+            android:gravity="center"
             style="@style/tv1_phone_item"
             />
         <TextView

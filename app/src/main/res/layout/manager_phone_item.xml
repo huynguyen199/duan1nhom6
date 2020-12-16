@@ -2,7 +2,8 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="wrap_content"
-
+    android:background="@color/colorWhite"
+    android:layout_marginTop="5dp"
     >
     <RelativeLayout
        style="@style/Rlt_manager_phone_item"

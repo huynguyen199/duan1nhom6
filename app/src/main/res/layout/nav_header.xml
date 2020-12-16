@@ -11,9 +11,11 @@
     >
 
 
-    <ImageView
+    <com.mikhaellopez.circularimageview.CircularImageView
         android:id="@+id/image_user"
-        style="@style/img_nav_header" />
+        style="@style/img_nav_header"
+        app:civ_border="false"
+        />
 
     <TextView
         android:id="@+id/text_Email"

@@ -8,27 +8,32 @@
         <menu>
         <item
             android:id="@+id/nav_managerPhone"
+            android:icon="@drawable/ic_baseline_play_arrow_24"
             android:title="@string/menu_managerPhone"
             />
 
 
         <item
             android:id="@+id/nav_managerFeedback"
+            android:icon="@drawable/ic_baseline_play_arrow_24"
             android:title="@string/menu_managerFeedback"
             />
 
         <item
             android:id="@+id/nav_managerUser"
+            android:icon="@drawable/ic_baseline_play_arrow_24"
             android:title="@string/menu_managerUser"
             />
 
         <item
             android:id="@+id/nav_statistical"
+            android:icon="@drawable/ic_baseline_play_arrow_24"
             android:title="@string/statistical"
             />
 
         <item
             android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_baseline_play_arrow_24"
             android:title="@string/menu_logout"
             />
 

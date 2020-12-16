@@ -6,8 +6,9 @@
     android:layout_height="wrap_content"
     android:layout_marginBottom="10dp">
 
-    <ImageView
+    <com.mikhaellopez.circularimageview.CircularImageView
         android:id="@+id/image_user"
+        app:civ_border="false"
         style="@style/img_user_item"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
