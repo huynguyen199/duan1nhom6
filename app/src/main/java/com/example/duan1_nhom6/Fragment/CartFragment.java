@@ -102,8 +102,6 @@ public class CartFragment extends Fragment {
 
 
 
-
-
                 firebaseCart.child(firebaseUser.getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -211,6 +209,9 @@ public class CartFragment extends Fragment {
                 });
                 adapter.setFragment(new CartFragment());
                 recyclerView.setAdapter(adapter);
+                adapter.setTextTotal(texttotal);
+
+
             }
 
             @Override
@@ -218,6 +219,12 @@ public class CartFragment extends Fragment {
 
             }
         });
+
+
+
+
+
+
     }
 
 

@@ -51,6 +51,7 @@ import java.util.Map;
 
 public class CartsAdapter extends RecyclerView.Adapter<CartsAdapter.CardsHolder> {
 
+    private static int TOTAL = 0;
     private Context context;
      ArrayList<Carts> mCards = new ArrayList<>();
      ArrayList<Phone> mPhone;
@@ -64,6 +65,8 @@ public class CartsAdapter extends RecyclerView.Adapter<CartsAdapter.CardsHolder>
     FirebaseAuth firebaseUser;
     private boolean isSelectedAll;
 
+    TextView textTotal;
+
     private static  int TONG = 0;
     public CartsAdapter(Context context, ArrayList<Carts> mCarts,ArrayList<Phone> mphone) {
         this.context = context;
@@ -73,6 +76,10 @@ public class CartsAdapter extends RecyclerView.Adapter<CartsAdapter.CardsHolder>
         this.firebaseUser = FirebaseAuth.getInstance();
 
         this.mPhone = mphone;
+    }
+
+    public void setTextTotal(TextView textTotal) {
+        this.textTotal = textTotal;
     }
 
     public void setFragment(Fragment fragment) {
@@ -98,6 +105,11 @@ public class CartsAdapter extends RecyclerView.Adapter<CartsAdapter.CardsHolder>
 
     public void setBtnDel(Button btnDel) {
         this.btnDel = btnDel;
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull CardsHolder holder, int position, @NonNull List<Object> payloads) {
+        super.onBindViewHolder(holder, position, payloads);
     }
 
     @Override
@@ -168,7 +180,7 @@ public class CartsAdapter extends RecyclerView.Adapter<CartsAdapter.CardsHolder>
                                     firebaseCart.child(firebaseUser.getUid())
                                             .child(carts.getId_phone())
                                             .child("amount").setValue(total);
-                                    carts.setAmount(total);
+                                    mCards.get(position).setAmount(total);
                                     notifyData();
 
                                 }
@@ -184,6 +196,7 @@ public class CartsAdapter extends RecyclerView.Adapter<CartsAdapter.CardsHolder>
                                                     .child("amount").setValue(total);
                                         carts.setAmount(total);
                                         notifyData();
+
 
                                     }
 
@@ -202,14 +215,6 @@ public class CartsAdapter extends RecyclerView.Adapter<CartsAdapter.CardsHolder>
             }
         });
 
-
-
-/*        final Phone phones = mPhone.get(position);
-
-
-        holder.amountTxt.setText(String.valueOf(carts.getAmount()));
-        holder.namephone.setText(phones.getPhonename());
-        holder.pricephone.setText(String.valueOf(phones.getGiatien()));*/
         Log.d("checkbox", ""+selecALL);
 
         if (isSelectedAll){
@@ -225,6 +230,7 @@ public class CartsAdapter extends RecyclerView.Adapter<CartsAdapter.CardsHolder>
 
     }
 
+
     public void notifyData(){
         ((FragmentActivity)context).getSupportFragmentManager()
                 .beginTransaction()
@@ -234,6 +240,22 @@ public class CartsAdapter extends RecyclerView.Adapter<CartsAdapter.CardsHolder>
     @Override
     public int getItemCount() {
         return mCards.size();
+    }
+    public void getToTal() {
+        TOTAL = 0;
+        for (Phone phone : mPhone) {
+            for (Carts carts : mCards) {
+                if (phone.getId().equals(carts.getId_phone())) {
+                    TOTAL += phone.getGiatien() * carts.getAmount();
+                }
+            }
+
+            DecimalFormat nf = (DecimalFormat) DecimalFormat.getCurrencyInstance(Locale.FRANCE);
+            DecimalFormatSymbols formatSymbols = new DecimalFormatSymbols();
+            formatSymbols.setCurrencySymbol("vnd");
+            nf.setDecimalFormatSymbols(formatSymbols);
+            textTotal.setText("Tổng cộng: " + nf.format(TOTAL));
+        }
     }
 
 

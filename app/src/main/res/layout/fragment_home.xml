@@ -6,35 +6,34 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragment.HomeFragment">
 
-    <LinearLayout
-        style="@style/Ln_fragment_home"
-        >
-    <Toolbar
-        style="@style/toolbar_fragment_home"
-        >
-        <LinearLayout
-            style="@style/Ln_toolbar_fragment_home"
-            >
-            <EditText
-                android:id="@+id/edit_search"
-                style="@style/edt_fragment_home"
-                />
-            <ImageView
-                style="@style/img_fragment_home"
-
-                />
-        </LinearLayout>
-    </Toolbar>
 
         <ScrollView
-
            style="@style/scroll_fragment_home">
 
             <RelativeLayout
                 android:layout_width="match_parent"
+
                 android:layout_height="match_parent">
 
+                <RelativeLayout
+                    android:id="@+id/relative"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/background_toolbar"
+                    >
+                    <EditText
+                        android:id="@+id/edit_search"
+                        android:layout_width="350dp"
+                        android:background="@android:color/transparent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:drawableRight="@drawable/ic_baseline_search_24"
+                      />
+
+                </RelativeLayout>
                 <com.denzcoskun.imageslider.ImageSlider
+                    android:layout_below="@+id/relative"
                     android:id="@+id/image_slider"
                     style="@style/slider_fragment_home"
                     app:auto_cycle="true"
@@ -67,8 +66,6 @@
 
         </ScrollView>
 
-
-    </LinearLayout>
 
 
 </FrameLayout>
